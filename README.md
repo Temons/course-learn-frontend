@@ -1,2 +1,2 @@
-# course-ulbi-frontend
-Codebase from learning project https://ulbitv.ru/frontend
+# course frontend
+Codebase from learning project
