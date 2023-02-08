@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack  --env mode=production",
-    "build:dev": "webpack  --env mode=development"
+    "build:dev": "webpack  --env mode=development",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix\n"
   },
   "keywords": [],
   "author": "",
@@ -20,9 +22,13 @@
     "@types/react-dom": "^17.0.11",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-i18next-extract": "^0.8.3",
     "css-loader": "^6.6.0",
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.32.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
