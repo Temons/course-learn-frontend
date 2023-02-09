@@ -1,7 +1,8 @@
 module.exports = {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
@@ -29,5 +30,8 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "warn",
     "no-undef": "warn",
     "i18next/no-literal-string": 0
+  },
+  globals: {
+    __IS_DEV__: true
   }
 };
