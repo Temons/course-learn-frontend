@@ -3,5 +3,9 @@
   "aboutPage": "aboutPage",
   "aboutSite": "aboutSite",
   "language": "language",
-  "mainPage": "mainPage"
+  "mainPage": "mainPage",
+  "pageError": "pageError",
+  "pageNotFound": "pageNotFound",
+  "reloadPage": "reloadPage",
+  "throwError": "throwError"
 }

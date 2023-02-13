@@ -1,5 +1,6 @@
 {
   "TestTranslate": "Russian file",
   "changeLang": "Сменить язык на английский",
-  "language": "English"
+  "language": "English",
+  "throwError": "Выбросить ошибку"
 }
