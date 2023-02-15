@@ -2,5 +2,7 @@
   "TestTranslate": "Russian file",
   "changeLang": "Сменить язык на английский",
   "language": "English",
-  "throwError": "Выбросить ошибку"
+  "throwError": "Выбросить ошибку",
+  "main": "Главная",
+  "aboutSite": "О сайте"
 }
