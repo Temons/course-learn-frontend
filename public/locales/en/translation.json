@@ -2,5 +2,7 @@
   "TestTranslate": "ENgl file",
   "changeLang": "Change language to russian",
   "language": "Russian",
-  "throwError": "Throw Error"
+  "throwError": "Throw Error",
+  "main": "Main",
+  "aboutSite": "About Site"
 }
