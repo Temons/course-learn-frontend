@@ -1,8 +1,8 @@
 {
-  "CVVVVVV": "CVVVVVV",
   "aboutPage": "aboutPage",
   "aboutSite": "aboutSite",
   "language": "language",
+  "main": "main",
   "mainPage": "mainPage",
   "pageError": "pageError",
   "pageNotFound": "pageNotFound",
