@@ -4,5 +4,6 @@
   "language": "English",
   "throwError": "Выбросить ошибку",
   "main": "Главная",
-  "aboutSite": "О сайте"
+  "aboutSite": "О сайте",
+  "toggle": "Переключить"
 }

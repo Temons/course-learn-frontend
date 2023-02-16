@@ -4,5 +4,6 @@
   "language": "Russian",
   "throwError": "Throw Error",
   "main": "Main",
-  "aboutSite": "About Site"
+  "aboutSite": "About Site",
+  "toggle": "toggle"
 }
