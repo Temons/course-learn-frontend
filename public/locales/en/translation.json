@@ -1,7 +1,8 @@
 {
   "TestTranslate": "ENgl file",
   "changeLang": "Change language to russian",
-  "language": "Russian",
+  "lang": "Russian",
+  "shortLang": "Ru",
   "throwError": "Throw Error",
   "main": "Main",
   "aboutSite": "About Site",

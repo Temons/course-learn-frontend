@@ -7,5 +7,6 @@
   "pageError": "pageError",
   "pageNotFound": "pageNotFound",
   "reloadPage": "reloadPage",
-  "throwError": "throwError"
+  "throwError": "throwError",
+  "toggle": "toggle"
 }

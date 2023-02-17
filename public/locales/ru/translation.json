@@ -1,7 +1,8 @@
 {
   "TestTranslate": "Russian file",
   "changeLang": "Сменить язык на английский",
-  "language": "English",
+  "lang": "English",
+  "shortLang": "En",
   "throwError": "Выбросить ошибку",
   "main": "Главная",
   "aboutSite": "О сайте",
