@@ -13,7 +13,7 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300
 
-export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
+export const  Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const timeRef = useRef<ReturnType<typeof setTimeout>>();
