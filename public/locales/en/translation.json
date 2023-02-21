@@ -6,5 +6,7 @@
   "throwError": "Throw Error",
   "main": "Main",
   "aboutSite": "About Site",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "decrement": "decrement",
+  "increment": "increment"
 }
