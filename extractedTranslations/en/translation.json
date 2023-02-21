@@ -4,6 +4,7 @@
   "decrement": "decrement",
   "increment": "increment",
   "language": "language",
+  "logIn": "logIn",
   "main": "",
   "mainPage": "mainPage",
   "pageError": "pageError",
