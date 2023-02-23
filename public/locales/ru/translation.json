@@ -8,5 +8,8 @@
   "aboutSite": "О сайте",
   "toggle": "Переключить",
   "decrement": "уменьшить",
-  "increment": "увеличить"
+  "increment": "увеличить",
+  "logIn": "Войти",
+  "inputUsername": "введите имя",
+  "inputPassword": "введите пароль"
 }

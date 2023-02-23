@@ -1,8 +1,13 @@
 {
+  "": "",
+  "Input Username": "Input Username",
+  "Input password": "Input password",
   "aboutPage": "aboutPage",
   "aboutSite": "aboutSite",
   "decrement": "decrement",
   "increment": "increment",
+  "inputPassword": "inputPassword",
+  "inputUsername": "inputUsername",
   "language": "language",
   "logIn": "logIn",
   "main": "",

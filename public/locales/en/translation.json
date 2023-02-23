@@ -8,5 +8,8 @@
   "aboutSite": "About Site",
   "toggle": "toggle",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "logIn": "Log In",
+  "inputUsername": "input username",
+  "inputPassword": "input password"
 }
