@@ -10,6 +10,8 @@
   "decrement": "уменьшить",
   "increment": "увеличить",
   "logIn": "Войти",
+  "logOut": "Выйти",
   "inputUsername": "введите имя",
-  "inputPassword": "введите пароль"
+  "inputPassword": "введите пароль",
+  "formAuth": "Форма Авторизации"
 }
