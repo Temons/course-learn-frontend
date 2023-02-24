@@ -10,6 +10,8 @@
   "decrement": "decrement",
   "increment": "increment",
   "logIn": "Log In",
+  "logOut": "Log Out",
   "inputUsername": "input username",
-  "inputPassword": "input password"
+  "inputPassword": "input password",
+  "formAuth": "Authorization Form"
 }
