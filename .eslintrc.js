@@ -32,7 +32,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', "to"]
+        ignoreAttribute: ['data-testid', "to", "name"]
       }
     ],
     "@typescript-eslint/no-var-requires": "off",
