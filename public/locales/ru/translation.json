@@ -13,5 +13,6 @@
   "logOut": "Выйти",
   "inputUsername": "введите имя",
   "inputPassword": "введите пароль",
-  "formAuth": "Форма Авторизации"
+  "formAuth": "Форма Авторизации",
+  "profilePage": "страница профиля"
 }

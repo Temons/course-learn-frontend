@@ -15,7 +15,7 @@
     {
       "id": "1",
       "body": "some comment",
-      "postId": 1
+      "postId": "1"
     }
   ],
   "users": [
@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Artem",
+    "lastname": "Trofimuk",
+    "age": 30,
+    "currency": "EUR",
+    "country": "Portugal",
+    "city": "Lisbon",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }

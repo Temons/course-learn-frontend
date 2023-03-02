@@ -16,6 +16,7 @@
   "mainPage": "mainPage",
   "pageError": "pageError",
   "pageNotFound": "pageNotFound",
+  "profilePage": "profilePage",
   "reloadPage": "reloadPage",
   "throwError": "throwError",
   "toggle": "toggle"

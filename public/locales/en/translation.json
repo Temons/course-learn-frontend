@@ -5,7 +5,7 @@
   "shortLang": "Ru",
   "throwError": "Throw Error",
   "main": "Main",
-  "aboutSite": "About Site",
+  "about": "About Site",
   "toggle": "toggle",
   "decrement": "decrement",
   "increment": "increment",
@@ -13,5 +13,6 @@
   "logOut": "Log Out",
   "inputUsername": "input username",
   "inputPassword": "input password",
-  "formAuth": "Authorization Form"
+  "formAuth": "Authorization Form",
+  "profilePage": "profile Page"
 }
