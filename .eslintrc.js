@@ -27,7 +27,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "object-curly-spacing": ["error", "always"],
     "@typescript-eslint/ban-ts-comment": "warn",
-    "no-undef": "warn",
+    "no-undef": "off",
     "i18next/no-literal-string": [
       'error',
       {
@@ -41,7 +41,8 @@ module.exports = {
     "react/display-name": "off"
   },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   },
   overrides: [
     {
