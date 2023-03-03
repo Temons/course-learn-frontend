@@ -5,6 +5,7 @@
   "aboutPage": "aboutPage",
   "aboutSite": "aboutSite",
   "decrement": "decrement",
+  "edit": "edit",
   "formAuth": "",
   "increment": "increment",
   "inputPassword": "inputPassword",
@@ -16,8 +17,11 @@
   "mainPage": "mainPage",
   "pageError": "pageError",
   "pageNotFound": "pageNotFound",
+  "profile": "profile",
   "profilePage": "profilePage",
   "reloadPage": "reloadPage",
   "throwError": "throwError",
-  "toggle": ""
+  "toggle": "",
+  "yourName": "yourName",
+  "yourSurname": "yourSurname"
 }
