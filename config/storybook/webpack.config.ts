@@ -13,14 +13,12 @@ export default ({ config }: {config:webpack.Configuration}) => {
   config.resolve!.modules = [ paths.src, "node_modules" ]
   config.resolve!.extensions!.push('.ts', '.tsx');
 
-  // @ts-ignore
-  config.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
-    if (rule.test instanceof RegExp && rule.test.toString().includes('svg')) {
-      return { ...rule, exclude: /\.svg$/i };
-    }
-
-    return rule
-  })
+  const rules = config.module!.rules as RuleSetRule[];
+  config.module!.rules = rules.map((rule: RuleSetRule) => (
+    /svg/.test(rule.test as string)
+      ? { ...rule, exclude: /\.svg$/i }
+      : rule
+  ));
 
   config.module!.rules.push({
     test: /\.svg$/i,
