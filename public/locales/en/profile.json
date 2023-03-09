@@ -1,6 +1,20 @@
 {
   "profile": "Profile",
   "edit": "Edit profile info",
-  "yourName": "your name",
-  "yourSurname": "your surname"
+  "cancel": "cancel edit",
+  "errorTitle": "Title for error message at Profile page",
+  "errorBody": "Some error from profile page",
+  "save": "Save",
+  "yourName": "Your name",
+  "yourSurname": "Your surname",
+  "yourAge": "Your age",
+  "yourCity": "Your city",
+  "userName": "Input username",
+  "yourAvatar": "Link to avatar",
+  "errorServer": "error from Server",
+  "errorIncorrectCountry": "Country Incorrect",
+  "errorIncorrectUserData": "User Data Incorrect",
+  "errorIncorrectAge": "Age Incorrect",
+  "errorNoData": "No Data",
+  "errorIncorrectCityValue": "City Value Incorrect"
 }

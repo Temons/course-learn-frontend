@@ -1,6 +1,20 @@
 {
   "profile": "Профиль",
   "edit": "Редактировать профиль",
+  "cancel": "Завершить редактирование",
   "yourName": "Ваше имя",
-  "yourSurname": "Ваша фамилия"
+  "yourSurname": "Ваша фамилия",
+  "errorTitle": "Заголовок ошибки на странице профиля",
+  "errorBody": "Текст некоторой ошибки на странице профиля",
+  "save": "Сохранить",
+  "yourAge": "Ваш возраст",
+  "yourCity": "Ваш город",
+  "userName": "Введите имя пользователя",
+  "yourAvatar": "Ссылка на аватар",
+  "errorServer": "ошибка с сервера",
+  "errorIncorrectCountry": "ошибка выбора страны",
+  "errorIncorrectUserData": "ошибка: некорректные данные пользователя",
+  "errorIncorrectAge": "ошибка возраста",
+  "errorNoData": "ошибка: Нет Данных!",
+  "errorIncorrectCityValue": "ошибка значения Города"
 }

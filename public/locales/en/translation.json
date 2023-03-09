@@ -14,5 +14,7 @@
   "inputUsername": "input username",
   "inputPassword": "input password",
   "formAuth": "Authorization Form",
-  "profilePage": "profile Page"
+  "profilePage": "profile Page",
+  "setCurrency": "Set Currency",
+  "setCountry": "Set Country"
 }

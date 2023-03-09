@@ -1,6 +1,21 @@
 {
+  "": "",
+  "cancel": "",
   "edit": "",
+  "errorBody": "",
+  "errorIncorrectAge": "",
+  "errorIncorrectCityValue": "",
+  "errorIncorrectCountry": "",
+  "errorIncorrectUserData": "",
+  "errorServer": "",
+  "errorTitle": "",
   "profile": "",
+  "save": "",
+  "setCurrency": "",
+  "userName": "",
+  "yourAge": "",
+  "yourAvatar": "",
+  "yourCity": "",
   "yourName": "",
   "yourSurname": ""
 }

@@ -97,7 +97,6 @@
     "react-router-dom": "^6.2.1"
   },
   "loki": {
-    "fetchFailIgnore": ".*",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",

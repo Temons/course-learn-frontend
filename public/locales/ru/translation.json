@@ -14,5 +14,7 @@
   "inputUsername": "введите имя",
   "inputPassword": "введите пароль",
   "formAuth": "Форма Авторизации",
-  "profilePage": "страница профиля"
+  "profilePage": "страница профиля",
+  "setCurrency": "Укажите валюту",
+  "setCountry": "Укажите город"
 }
