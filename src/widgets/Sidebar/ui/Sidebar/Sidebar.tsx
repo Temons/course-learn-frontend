@@ -9,8 +9,8 @@ import { SidebarItem } from "widgets/Sidebar/ui/SidebarItem/SidebarItem";
 
 interface SidebarProps {
     className? : string;
-
 }
+
 export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
 
