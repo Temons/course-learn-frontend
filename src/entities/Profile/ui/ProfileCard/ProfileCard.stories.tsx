@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ProfileCard } from "./ProfileCard";
 import { Currency } from "entities/Currency";
-import avatar from 'shared/assets/tests/storybook.jpg'
 import { Country } from "entities/Country";
 
 export default {
@@ -25,7 +24,7 @@ Primary.args = {
     first: 'first',
     currency: Currency.EUR,
     country: Country.Portugal,
-    avatar
+    avatar: 'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'
   }
 };
 

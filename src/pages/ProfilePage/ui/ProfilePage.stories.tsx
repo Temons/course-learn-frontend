@@ -52,3 +52,22 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator(
     }
   }
 )]
+
+
+export const Orange = Template.bind({});
+Orange.args = {};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE), StoreDecorator(
+  {
+    profile: {
+      readonly: true,
+      form: {
+        username: 'Username',
+        age: 43,
+        city: "Lisbon",
+        lastname: 'lastname',
+        first: 'first',
+        currency: Currency.EUR,
+      }
+    }
+  }
+)]
