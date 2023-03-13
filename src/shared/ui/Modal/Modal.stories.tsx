@@ -25,11 +25,13 @@ Dark.args = {
   isOpen: true,
   children: "Lorem ipsum dolor sit amet, consecrate radicalising."
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.parameters = { loki: { skip: true } };
 
 export const Orange = Template.bind({});
 Orange.args = {
   isOpen: true,
   children: "Lorem ipsum dolor sit amet, consecrate radicalising."
 };
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)]
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+Orange.parameters = { loki: { skip: true } }
