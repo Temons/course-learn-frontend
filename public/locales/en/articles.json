@@ -1,4 +1,6 @@
 {
   "main": "Article Page",
-  "details": "Article Detail Page"
+  "details": "Article Detail Page",
+  "articleNotFound": "Can't find article :(",
+  "errorHappened": "Can't download article, error"
 }
