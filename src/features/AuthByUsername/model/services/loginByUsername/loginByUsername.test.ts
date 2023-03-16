@@ -42,14 +42,14 @@ describe('loginByUsername test', () => {
   // })
 
   test('works correctly with correct data', async () => {
-    const userValue = { userName: '123', id: '1'  };
+    const userValue = { username: '123', id: '1'  };
 
     const thunk = new TestAsyncThunk(loginByUsername);
     thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
 
     const result = await thunk.callThunk({ password: "123", username: "321" });
 
-    expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue))
+    expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
     expect(thunk.dispatch).toHaveBeenCalledTimes(3)
     expect(thunk.api.post).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
