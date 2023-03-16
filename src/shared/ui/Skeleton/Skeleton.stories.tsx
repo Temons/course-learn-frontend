@@ -32,7 +32,7 @@ NormalDark.args = {
   width: '100%',
   height: 200
 };
-NormalDark.decorators = [ThemeDecorator(Theme.DARK)]
+NormalDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const CircleDark = Template.bind({});
 CircleDark.args = {
@@ -40,4 +40,19 @@ CircleDark.args = {
   width: 100,
   height: 100
 };
-CircleDark.decorators = [ThemeDecorator(Theme.DARK)]
+CircleDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const NormalOrange = Template.bind({});
+NormalOrange.args = {
+  width: '100%',
+  height: 200
+};
+NormalOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const CircleOrange = Template.bind({});
+CircleOrange.args = {
+  border: '50%',
+  width: 100,
+  height: 100
+};
+CircleOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
