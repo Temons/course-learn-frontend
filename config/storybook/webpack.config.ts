@@ -10,7 +10,7 @@ export default ({ config }: {config:webpack.Configuration}) => {
     html: "",
     src: path.resolve(__dirname, '..', '..', 'src')
   }
-  config.resolve!.modules = [ paths.src, "node_modules" ]
+  config!.resolve!.modules!.push(paths.src);
   config.resolve!.extensions!.push('.ts', '.tsx');
 
   const rules = config.module!.rules as RuleSetRule[];
