@@ -16,5 +16,7 @@
   "formAuth": "Authorization Form",
   "profilePage": "profile Page",
   "setCurrency": "Set Currency",
-  "setCountry": "Set Country"
+  "setCountry": "Set Country",
+  "comments": "Comments",
+  "commentsEmpty": "Don't have any comments"
 }
