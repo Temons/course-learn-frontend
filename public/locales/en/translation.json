@@ -18,5 +18,7 @@
   "setCurrency": "Set Currency",
   "setCountry": "Set Country",
   "comments": "Comments",
-  "commentsEmpty": "Don't have any comments"
+  "commentsEmpty": "Don't have any comments",
+  "inputComment": "Input comments text",
+  "send": "Send"
 }
