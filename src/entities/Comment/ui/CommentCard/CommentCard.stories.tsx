@@ -19,7 +19,7 @@ const comment = {
   user: {
     id: '42',
     username: 'username string',
-    avatar: 'https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj',
+    avatar: 'https://eimg.pravda.com/images/doc/9/9/991c35e-white-hackers-690.jpg',
   }
 }
 export const Normal = Template.bind({});
