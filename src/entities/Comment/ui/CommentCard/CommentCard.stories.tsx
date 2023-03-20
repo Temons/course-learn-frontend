@@ -5,7 +5,7 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from "app/providers/ThemeProvider";
 
 export default {
-  title: 'shared/CommentCard',
+  title: 'entities/Comment/CommentCard',
   component: CommentCard,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -29,6 +29,7 @@ Normal.args = {
 
 export const LoadingNormal = Template.bind({});
 LoadingNormal.args = {
+  comment,
   isLoading: true
 };
 
