@@ -2,5 +2,7 @@
   "main": "Article Detail Page но на русском",
   "details": "Article Detail Page но на русском",
   "articleNotFound": "Статья не найдена :(",
-  "errorHappened": "Произошла ошибка при загрузке статьи"
+  "errorHappened": "Произошла ошибка при загрузке статьи",
+  "readMore": "Читать далее",
+  "backToList": "Назад к списку"
 }

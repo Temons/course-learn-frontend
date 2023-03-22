@@ -2,5 +2,7 @@
   "main": "Article Page",
   "details": "Article Detail Page",
   "articleNotFound": "Can't find article :(",
-  "errorHappened": "Can't download article, error"
+  "errorHappened": "Can't download article, error",
+  "readMore": "Read more",
+  "backToList": "Back to list"
 }
