@@ -3,7 +3,7 @@ import { memo } from "react";
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from "../../model/types/article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
-import { ArticleListItemSkeleton } from "entities/Article/ui/ArticleListItem/ArticleListItemSkeleton";
+import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
 
 interface ArticleListProps {
   className?: string;
@@ -28,14 +28,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
     view = ArticleView.BIG
   } = props;
 
-  if (isLoading) {
-    return (
-      <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-        {getSkeletons(view)}
-      </div>
-    )
-  }
-
   const renderArticle = (article: Article) => (
     <ArticleListItem
       article={article}
@@ -51,6 +43,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         ? articles.map(renderArticle)
         : null
       }
+      {isLoading && getSkeletons(view)}
     </div>
   );
 });

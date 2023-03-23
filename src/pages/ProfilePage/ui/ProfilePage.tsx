@@ -21,6 +21,7 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { useParams } from "react-router-dom";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country";
+import { Page } from "shared/ui/Page/Page";
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -90,15 +91,15 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount >
-      <ProfilePageHeader />
-      {validateErrors?.length && validateErrors.map(err => (
-        <Text
-          theme={TextTheme.ERROR}
-          key={err}
-          text={validateErrorTranslates[err]}
-        />
-      ))}
-      <div className={classNames('', {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
+        <ProfilePageHeader />
+        {validateErrors?.length && validateErrors.map(err => (
+          <Text
+            theme={TextTheme.ERROR}
+            key={err}
+            text={validateErrorTranslates[err]}
+          />
+        ))}
         <ProfileCard
           data={formData}
           isLoading={isLoading}
@@ -113,7 +114,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
