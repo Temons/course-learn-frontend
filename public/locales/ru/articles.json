@@ -4,5 +4,18 @@
   "articleNotFound": "Статья не найдена :(",
   "errorHappened": "Произошла ошибка при загрузке статьи",
   "readMore": "Читать далее",
-  "backToList": "Назад к списку"
+  "backToList": "Назад к списку",
+  "sortBy": "Сортировать по",
+  "search": "Поиск",
+  "by": "По",
+  "increase": "возрастанию",
+  "decrease": "убыванию",
+  "dateOfCreated": "дате создания",
+  "title": "заголовок",
+  "views": "просмотры",
+  "allArticles": "все",
+  "it": "айти",
+  "economics": "экономика",
+  "science": "наука",
+  "articlesNotFound": "Статьи не найдены"
 }
