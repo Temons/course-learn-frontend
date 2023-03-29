@@ -4,5 +4,18 @@
   "articleNotFound": "Can't find article :(",
   "errorHappened": "Can't download article, error",
   "readMore": "Read more",
-  "backToList": "Back to list"
+  "backToList": "Back to list",
+  "sortBy": "Sort by",
+  "search": "Search",
+  "by": "By",
+  "increase": "increase",
+  "decrease": "decrease",
+  "dateOfCreated": "date of created",
+  "title": "title",
+  "views": "views",
+  "allArticles": "all",
+  "it": "it",
+  "economics": "economics",
+  "science": "science",
+  "articlesNotFound": "Articles not found"
 }

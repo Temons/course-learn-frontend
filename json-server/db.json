@@ -87,13 +87,13 @@
     {
       "id": "2",
       "title": "React news",
-      "subtitle": "Что нового в React за 2022 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "subtitle": "Что нового в React за 2021 год?",
+      "img": "https://cdn1.byjus.com/wp-content/uploads/2020/09/Science.png",
       "views": 2453,
       "userId": "1",
-      "createdAt": "26.02.2022",
+      "createdAt": "26.01.2012",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -231,13 +231,13 @@
     {
       "id": "4",
       "title": "Javascript news 4",
-      "subtitle": "Что нового в React за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "subtitle": "Что нового в React за 2012 год?",
+      "img": "https://esplibrary.com/wp-content/uploads/2022/09/640px-Economics.jpg",
       "views": 1022,
       "userId": "1",
-      "createdAt": "26.02.2022",
+      "createdAt": "11.02.2044",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -520,12 +520,13 @@
       "id": "8",
       "title": "React news 8",
       "subtitle": "Что нового в React за 20228 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "img": "https://esplibrary.com/wp-content/uploads/2022/09/640px-Economics.jpg",
       "views": 8888,
       "userId": "1",
-      "createdAt": "26.02.2022",
+      "createdAt": "3.11.2022",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -592,12 +593,13 @@
       "id": "9",
       "title": "Angular news 9",
       "subtitle": "Что нового в Angular за 2022 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoxZXMULleGxY4v9soZxCKs-CBHu5YPYIGvQ&usqp=CAU",
       "views": 9999,
       "userId": "1",
       "createdAt": "26.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -735,11 +737,11 @@
     {
       "id": "11",
       "title": "React news 11",
-      "subtitle": "Что нового в React за 2022 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "subtitle": "Что нового в React за 2044 год?",
+      "img": "https://developer.okta.com/assets-jekyll/blog/tutorial-kotlin-beginners-guide/kotlin-logo-social-21c8518b19eb96d96f35e0057bb92b7e1281a24820e0fa09e39c42f184bd7faa.png",
       "views": 1111,
       "userId": "1",
-      "createdAt": "26.02.2022",
+      "createdAt": "26.02.2002",
       "type": [
         "IT"
       ],
@@ -951,9 +953,9 @@
     {
       "id": "14",
       "title": "React news 14",
-      "subtitle": "Что нового в React за 2022 год?",
+      "subtitle": "Что нового в React за 2011 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-      "views": 1414,
+      "views": 114,
       "userId": "1",
       "createdAt": "26.02.2022",
       "type": [
@@ -1024,7 +1026,7 @@
       "id": "15",
       "title": "Angular news 15",
       "subtitle": "Что нового в Angular за 2022 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+      "img": "https://developer.okta.com/assets-jekyll/blog/tutorial-kotlin-beginners-guide/kotlin-logo-social-21c8518b19eb96d96f35e0057bb92b7e1281a24820e0fa09e39c42f184bd7faa.png",
       "views": 1515,
       "userId": "1",
       "createdAt": "26.02.2022",
@@ -1079,7 +1081,7 @@
         {
           "id": "8",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "src": "https://kotlinlang.org/assets/images/twitter/general.png",
           "title": "Рисунок 1 - скриншот сайта"
         },
         {
