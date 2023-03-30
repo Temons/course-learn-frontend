@@ -20,5 +20,7 @@
   "comments": "Comments",
   "commentsEmpty": "Don't have any comments",
   "inputComment": "Input comments text",
-  "send": "Send"
+  "send": "Send",
+  "frontendApp": "Frontend App",
+  "createArticle": "create Article"
 }

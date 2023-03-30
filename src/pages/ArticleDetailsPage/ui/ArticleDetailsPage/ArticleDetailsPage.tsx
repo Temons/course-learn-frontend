@@ -1,5 +1,5 @@
 import { memo, useCallback } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
@@ -15,8 +15,6 @@ import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByAr
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { AddCommentForm } from "features/addCommentForm";
 import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { Page } from "widgets/Page/Page";
 import { getArticleRecommendations } from "../../model/slices/ArticleDetailsPageRecommendationsSlice";
 import { getArticleRecommendationsIsLoading } from "../../model/selectors/recommendations";
@@ -24,6 +22,7 @@ import {
   fetchArticleRecommendations
 } from "../../model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 import { articleDetailsPageReducer } from "../../model/slices";
+import { ArticleDetailsPageHeader } from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -41,15 +40,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const recommendations = useSelector(getArticleRecommendations.selectAll);
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
-  const navigate = useNavigate();
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text ))
   }, [dispatch]);
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [navigate])
 
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
@@ -59,7 +53,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   if (!id) {
     return (
       <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-        {t('articleNotFound')}
+        {t('articles:articleNotFound')}
       </Page>
     )
   }
@@ -67,9 +61,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-        <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-          {t('backToList')}
-        </Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text
           size={TextSize.L}

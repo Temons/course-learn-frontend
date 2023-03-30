@@ -18,5 +18,8 @@
   "economics": "economics",
   "science": "science",
   "articlesNotFound": "Articles not found",
-  "recommend": "We recommend next articles:"
+  "recommend": "We recommend next articles:",
+  "edit": "Edit",
+  "editArticle": "Edit article with ID = ",
+  "createNewArticle": "Create a new article"
 }
