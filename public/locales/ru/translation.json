@@ -20,5 +20,7 @@
   "comments": "Комментарии",
   "commentsEmpty": "Комментарии отсутствуют",
   "inputComment": "Введите текст комментария",
-  "send": "Отправить"
+  "send": "Отправить",
+  "frontendApp": "App фронтенд",
+  "createArticle": "создать статью"
 }
