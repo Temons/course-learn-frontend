@@ -8,7 +8,12 @@ export default ({ config }: {config:webpack.Configuration}) => {
     build: "",
     entry: "",
     html: "",
-    src: path.resolve(__dirname, '..', '..', 'src')
+    src: path.resolve(__dirname, '..', '..', 'src'),
+    buildFavicon: "",
+    buildLocales: "",
+    favicon: "",
+    locales: ""
+
   }
   config!.resolve!.modules!.push(paths.src);
   config.resolve!.extensions!.push('.ts', '.tsx');

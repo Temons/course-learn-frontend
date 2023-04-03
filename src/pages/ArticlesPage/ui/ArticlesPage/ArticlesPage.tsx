@@ -15,7 +15,7 @@ import {
 import { Page } from "widgets/Page/Page";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
-import { ArticlesPageFilters } from "pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters";
+import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
 
 interface ArticlesPageProps {
   className?: string;
