@@ -2,7 +2,6 @@ import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
-import cls from './ArticlesPage.module.scss';
 import { ArticleList } from "entities/Article";
 import { DynamicModuleLoader, ReducersList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articlesPageReducer, getArticles } from "../../model/slices/articlesPageSlice";
@@ -16,6 +15,7 @@ import { Page } from "widgets/Page/Page";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
+import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
   className?: string;
