@@ -2,8 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleDetails } from './ArticleDetails';
 import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Article } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
+import { ArticleBlockType, ArticleType, Article } from "../../model/types/article";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 

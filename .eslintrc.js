@@ -19,7 +19,8 @@ module.exports = {
     "react",
     "@typescript-eslint",
     "i18next",
-    "react-hooks"
+    "react-hooks",
+    "arttraf-eslint-fsd-plugin"
   ],
   "rules": {
     "react/jsx-indent": [2, 2],
@@ -38,7 +39,8 @@ module.exports = {
     "@typescript-eslint/no-var-requires": "off",
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "arttraf-eslint-fsd-plugin/path-checker": "error"
   },
   globals: {
     __IS_DEV__: true,
