@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo, useCallback, useMemo } from "react";
 import { TabItem, Tabs } from "shared/ui/Tabs/Tabs";
-import { ArticleType } from "entities/Article";
+import { ArticleType } from "../../model/types/article";
 import { useTranslation } from "react-i18next";
 
 interface ArticleTypeTabsProps {
@@ -36,7 +36,7 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
   const onTabClick = useCallback((tab: TabItem) => {
     onChangeType(tab.value as ArticleType)
   }, [onChangeType])
-  
+
   return (
     <Tabs
       tabs={typeTabs}

@@ -5,7 +5,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { memo } from "react";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
-import { SidebarItemType } from "widgets/Sidebar/model/types/sidebar";
+import { SidebarItemType } from "../../model/types/sidebar";
 
 interface SidebarItemProps {
   item: SidebarItemType,
@@ -19,7 +19,7 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
   if (item.authOnly && !isAuth) {
     return null
   }
-  
+
   return (
     <AppLink
       theme={AppLinkTheme.SECONDARY}
