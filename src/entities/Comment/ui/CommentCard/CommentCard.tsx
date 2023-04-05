@@ -7,6 +7,7 @@ import { Skeleton } from "shared/ui/Skeleton/Skeleton";
 import { Comment } from "../../model/types/comment";
 import { AppLink } from "shared/ui/AppLink/AppLink";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { VStack } from "shared/ui/Stack";
 
 interface CommentCardProps {
   className?: string;
@@ -19,13 +20,13 @@ export const CommentCard = memo(({ className, comment, isLoading }: CommentCardP
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.commentCard, {}, [className, cls.loading])}>
+      <VStack gap={'8'} max className={classNames(cls.commentCard, {}, [className, cls.loading])}>
         <div className={cls.header}>
           <Skeleton width={30} height={30} border={'50%'} />
           <Skeleton height={16} width={100} className={cls.username} />
         </div>
-        <Skeleton width={'100%'} height={50} className={cls.text} />
-      </div>
+        <Skeleton width={'100%'} height={50} />
+      </VStack>
     )
   }
 
@@ -34,12 +35,12 @@ export const CommentCard = memo(({ className, comment, isLoading }: CommentCardP
   }
 
   return (
-    <div className={classNames(cls.commentCard, {}, [className])}>
+    <VStack gap={'8'} max className={classNames(cls.commentCard, {}, [className])}>
       <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
         {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar}/> : null}
         <Text className={cls.username} title={comment.user.username} />
       </AppLink>
-      <Text className={cls.text} text={comment.text} />
-    </div>
+      <Text text={comment.text} />
+    </VStack>
   );
 });

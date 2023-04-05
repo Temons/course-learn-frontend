@@ -33,7 +33,16 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', "to", "name", "target"]
+        ignoreAttribute: [
+          'data-testid',
+          "to",
+          "name",
+          "target",
+          "justify",
+          "align",
+          "direction",
+          "gap"
+        ]
       }
     ],
     "@typescript-eslint/no-var-requires": "off",
