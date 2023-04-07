@@ -22,5 +22,6 @@
   "inputComment": "Input comments text",
   "send": "Send",
   "frontendApp": "Frontend App",
-  "createArticle": "create Article"
+  "createArticle": "create Article",
+  "profile": "Profile"
 }

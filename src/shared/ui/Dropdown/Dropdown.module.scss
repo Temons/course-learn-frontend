@@ -1,40 +1,39 @@
-.listBox {
+.dropdown {
     position: relative;
 }
 
-.trigger {
+.btn {
     background: none;
-    border: none;
     outline: none;
-    padding: 0;
     margin: 0;
-}
-
-.options {
-    position: absolute;
-    z-index: 10000;
-    background: var(--listbox-bg);
-    border-radius: 12px;
-    box-shadow: 4px 4px 8px var(--listbox-bg);
-}
-
-.item {
-    padding: 10px 20px;
-    white-space: nowrap;
+    padding: 0;
+    border: none;
     cursor: pointer;
 }
 
-.selectedIcon {
-    stroke: var(--primary-color);
+.menu {
+    background: var(--card-bg);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    width: 100%;
+    padding: 10px 25px;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .active {
     background: var(--inverted-primary-color);
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
 }
 
 .optionsBottomLeft {

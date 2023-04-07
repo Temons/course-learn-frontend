@@ -93,6 +93,12 @@ video {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -113,7 +119,8 @@ body {
 }
 
 ol,
-ul {
+ul,
+li {
     list-style: none;
 }
 
