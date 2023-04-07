@@ -22,5 +22,6 @@
   "inputComment": "Введите текст комментария",
   "send": "Отправить",
   "frontendApp": "App фронтенд",
-  "createArticle": "создать статью"
+  "createArticle": "создать статью",
+  "profile": "Профиль"
 }

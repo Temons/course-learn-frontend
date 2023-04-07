@@ -34,7 +34,11 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <HStack max justify={'between'} className={classNames('', {}, [className])}>
+    <HStack
+      max
+      justify={'between'}
+      className={classNames('', {}, [className])}
+    >
       <Text title={t('profile')} />
       {
         canEdit &&  (

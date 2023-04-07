@@ -1,17 +1,17 @@
-import { ReactNode } from 'react'
+import { Fragment, ReactNode, useMemo } from 'react'
 import { Listbox as HListBox } from '@headlessui/react';
 import cls from './ListBox.module.scss';
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui/Button/Button";
 import { HStack } from "shared/ui/Stack";
+import { DropdownDirection } from "shared/types/ui";
+import SelectedIcon from 'shared/assets/icons/done.svg'
 
 export interface ListBoxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = "top" | "bottom";
 
 interface ListBoxProps {
   items?: ListBoxItem[];
@@ -24,6 +24,13 @@ interface ListBoxProps {
   label?: string;
 }
 
+const mapDirectionClass: Record<DropdownDirection, string> = {
+  'bottom left': cls.optionsBottomLeft,
+  'bottom right': cls.optionsBottomRight,
+  'top left': cls.optionTopLeft,
+  'top right': cls.optionsTopRight
+}
+
 export function ListBox(props: ListBoxProps) {
   const {
     items = [],
@@ -32,11 +39,17 @@ export function ListBox(props: ListBoxProps) {
     defaultValue,
     onChange,
     readonly,
-    direction = "bottom",
+    direction = "bottom right",
     label
   } = props;
 
-  const optionClasses = [cls[direction]];
+  const optionsClasses = [mapDirectionClass[direction]];
+
+  const itemsWithLabel = useMemo(
+    () => ( label ?
+      [ { value: "_label", content: label, disabled: true }, ...items ]
+      : items
+    ), [ items, label ])
 
   return (
     <HStack gap={'4'}>
@@ -57,14 +70,15 @@ export function ListBox(props: ListBoxProps) {
             {value ?? defaultValue}
           </Button>
         </HListBox.Button>
-        <HListBox.Options className={classNames(cls.options, {}, optionClasses)}>
-          {items?.map((item) => (
+        <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+          {itemsWithLabel?.map((item) => (
             <HListBox.Option
               key={item.value}
               value={item.value}
               disabled={item.disabled}
+              as={Fragment}
             >
-              {({ active }) => (
+              {({ active, selected }) => (
                 <li
                   className={
                     classNames(cls.item, {
@@ -73,7 +87,10 @@ export function ListBox(props: ListBoxProps) {
                     })
                   }
                 >
-                  {item.content}
+                  <HStack gap={'8'}>
+                    {item.content}
+                    {selected && <SelectedIcon className={cls.selectedIcon} />}
+                  </HStack>
                 </li>
               )}
             </HListBox.Option>
