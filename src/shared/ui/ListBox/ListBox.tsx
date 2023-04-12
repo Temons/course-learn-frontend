@@ -63,8 +63,9 @@ export function ListBox(props: ListBoxProps) {
         disabled={readonly}
       >
         <HListBox.Button
+          as={'span'}
           className={cls.trigger}
-          disabled={readonly}
+          // disabled={readonly}
         >
           <Button disabled={readonly}>
             {value ?? defaultValue}
