@@ -1,5 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import { memo, useCallback } from "react";
+import { memo, Suspense, useCallback } from "react";
 import { Text } from "shared/ui/Text/Text";
 import { AddCommentForm } from "features/addCommentForm";
 import { CommentList } from "entities/Comment";
@@ -14,10 +14,11 @@ import {
   fetchCommentsByArticleId
 } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { VStack } from "shared/ui/Stack";
+import { Loader } from "shared/ui/Loader/Loader";
 
 interface ArticleDetailsCommentsProps {
   className?: string;
-  id: string;
+  id?: string;
 }
 
 export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCommentsProps) => {
@@ -42,7 +43,9 @@ export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCom
       className={classNames('', {}, [className])}
     >
       <Text title={t('comments')} />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense fallback={<Loader />}>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList isLoading={commentsIsLoading} comments={comments} />
     </VStack>
   );

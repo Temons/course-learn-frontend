@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetails } from "entities/Article";
@@ -21,16 +20,7 @@ const reducers: ReducersList = {
 }
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-  const { t } = useTranslation(['articles', 'translation'] )
   const { id } = useParams<{ id: string }>();
-
-  if (!id) {
-    return (
-      <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-        {t('articles:articleNotFound')}
-      </Page>
-    )
-  }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
