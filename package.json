@@ -60,7 +60,6 @@
     "babel-plugin-i18next-extract": "^0.8.3",
     "concurrently": "^7.0.0",
     "copy-webpack-plugin": "^10.2.4",
-    "cross-fetch": "^3.1.5",
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
     "eslint-plugin-arttraf-eslint-fsd-plugin": "^0.0.4",
