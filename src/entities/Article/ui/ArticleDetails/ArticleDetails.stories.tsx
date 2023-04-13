@@ -2,9 +2,11 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleDetails } from './ArticleDetails';
 import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { ArticleBlockType, ArticleType, Article } from "../../model/types/article";
+import { Article } from "../../model/types/article";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
+import { ArticleType } from "../../model/consts/articlesConsts";
+import { ArticleBlockType } from "../../model/consts/articlesConsts";
 
 export default {
   title: 'entities/Article/ArticleDetails',

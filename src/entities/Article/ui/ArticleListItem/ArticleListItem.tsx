@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { HTMLAttributeAnchorTarget, memo } from "react";
 import cls from './ArticleListItem.module.scss';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from "../../model/types/article";
+import { Article, ArticleTextBlock } from "../../model/types/article";
 import { Text } from "shared/ui/Text/Text";
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import { Icon } from "shared/ui/Icon/Icon";
@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { AppLink } from "shared/ui/AppLink/AppLink";
+import { ArticleBlockType, ArticleView } from "../../model/consts/articlesConsts";
 
 interface ArticleListItemProps {
   className?: string;
@@ -36,7 +37,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const textBlock = article.blocks.find(
       block => block.type === ArticleBlockType.TEXT
     ) as ArticleTextBlock;
-    
+
     return (
       <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
         <Card className={cls.card}>
