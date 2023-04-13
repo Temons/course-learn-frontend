@@ -23,5 +23,8 @@
   "send": "Отправить",
   "frontendApp": "App фронтенд",
   "createArticle": "создать статью",
-  "profile": "Профиль"
+  "profile": "Профиль",
+  "adminPanelPage": "Панель админа",
+  "adminPanel": "Админка",
+  "noAccess": "У вас нет доступа к данной странице"
 }

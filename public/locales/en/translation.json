@@ -23,5 +23,8 @@
   "send": "Send",
   "frontendApp": "Frontend App",
   "createArticle": "create Article",
-  "profile": "Profile"
+  "profile": "Profile",
+  "adminPanelPage": "Admin Panel",
+  "adminPanel": "Admin",
+  "noAccess": "You don't have access to this page"
 }
