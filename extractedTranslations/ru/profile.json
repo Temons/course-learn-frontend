@@ -1,0 +1,20 @@
+{
+  "": "",
+  "cancel": "cancel",
+  "edit": "edit",
+  "errorBody": "errorBody",
+  "errorIncorrectAge": "errorIncorrectAge",
+  "errorIncorrectCityValue": "errorIncorrectCityValue",
+  "errorIncorrectCountry": "errorIncorrectCountry",
+  "errorIncorrectUserData": "errorIncorrectUserData",
+  "errorServer": "errorServer",
+  "errorTitle": "errorTitle",
+  "profile": "profile",
+  "save": "save",
+  "userName": "userName",
+  "yourAge": "yourAge",
+  "yourAvatar": "yourAvatar",
+  "yourCity": "yourCity",
+  "yourName": "yourName",
+  "yourSurname": "yourSurname"
+}
