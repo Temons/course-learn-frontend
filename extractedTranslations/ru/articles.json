@@ -1,4 +1,23 @@
 {
+  "allArticles": "allArticles",
   "articleNotFound": "articleNotFound",
-  "recommend": "recommend"
+  "articlesNotFound": "articlesNotFound",
+  "backToList": "backToList",
+  "by": "by",
+  "createNewArticle": "createNewArticle",
+  "dateOfCreated": "dateOfCreated",
+  "decrease": "decrease",
+  "economics": "economics",
+  "edit": "edit",
+  "editArticle": "editArticle",
+  "errorHappened": "errorHappened",
+  "increase": "increase",
+  "it": "it",
+  "readMore": "readMore",
+  "recommend": "recommend",
+  "science": "science",
+  "search": "search",
+  "sortBy": "sortBy",
+  "title": "title",
+  "views": "views"
 }
