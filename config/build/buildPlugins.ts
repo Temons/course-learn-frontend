@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BundleAnalyzerPlugin }  from "webpack-bundle-analyzer";
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 import CopyPlugin from "copy-webpack-plugin";
 
 export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
@@ -28,13 +29,19 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
         { from: paths.locales, to: paths.buildLocales },
         { from: paths.favicon, to: paths.buildFavicon },
       ],
-    }),
+    })
   ];
 
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin())
     plugins.push(new webpack.HotModuleReplacementPlugin())
-    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }))
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+    plugins.push(
+      new CircularDependencyPlugin({
+        exclude: /a\.js|node_modules/,
+        failOnError: true,
+      })
+    )
   }
 
   return plugins;
