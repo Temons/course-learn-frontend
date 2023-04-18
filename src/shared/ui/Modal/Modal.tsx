@@ -1,7 +1,9 @@
 import { classNames, Mods } from "shared/lib/classNames/classNames";
 import cls from './Modal.module.scss';
-import { ReactNode, MouseEvent, useState, useRef, useEffect, useCallback } from "react";
+import { ReactNode, useState, useRef, useEffect, useCallback } from "react";
 import { Portal } from "shared/ui/Portal/Portal";
+import { Overlay } from "shared/ui/Overlay/Overlay";
+import { useTheme } from "app/providers/ThemeProvider";
 
 interface ModalProps {
     className? : string;
@@ -25,13 +27,14 @@ export const Modal = (props: ModalProps) => {
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const timeRef = useRef<ReturnType<typeof setTimeout>>();
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (isOpen) {
       setIsMounted(true);
     }
   }, [isOpen]);
-  
+
   const closeHandler = useCallback(() => {
     if (onClose) {
       setIsClosing(true);
@@ -41,10 +44,6 @@ export const Modal = (props: ModalProps) => {
       }, ANIMATION_DELAY)
     }
   }, [onClose])
-
-  const onContentClick = (e: MouseEvent) => {
-    e.stopPropagation();
-  };
 
   const onKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -74,11 +73,10 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.modal, mods, [className])}>
-        <div className={cls.overlay} onClick={closeHandler}>
-          <div className={cls.content} onClick={onContentClick}>
-            {children}
-          </div>
+      <div className={classNames(cls.modal, mods, [className, theme])}>
+        <Overlay onClick={closeHandler} />
+        <div className={cls.content}>
+          {children}
         </div>
       </div>
     </Portal>

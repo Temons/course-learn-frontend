@@ -30,7 +30,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     setIsAuthModal(false)
   }, []);
 
-
   if (authData) {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
@@ -46,6 +45,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           {t('createArticle')}
         </AppLink>
         <HStack gap='16' className={cls.actions}>
+
           <NotificationButton />
           <AvatarDropdown />
         </HStack>
