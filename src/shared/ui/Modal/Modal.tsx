@@ -1,9 +1,10 @@
 import { classNames, Mods } from "shared/lib/classNames/classNames";
 import cls from './Modal.module.scss';
-import { ReactNode, useState, useRef, useEffect, useCallback } from "react";
+import { ReactNode } from "react";
 import { Portal } from "shared/ui/Portal/Portal";
 import { Overlay } from "shared/ui/Overlay/Overlay";
 import { useTheme } from "app/providers/ThemeProvider";
+import { useModal } from "shared/lib/hooks/useModal/useModal";
 
 interface ModalProps {
     className? : string;
@@ -24,43 +25,16 @@ export const Modal = (props: ModalProps) => {
     lazy,
   } = props;
 
-  const [isClosing, setIsClosing] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const timeRef = useRef<ReturnType<typeof setTimeout>>();
   const { theme } = useTheme();
-
-  useEffect(() => {
-    if (isOpen) {
-      setIsMounted(true);
-    }
-  }, [isOpen]);
-
-  const closeHandler = useCallback(() => {
-    if (onClose) {
-      setIsClosing(true);
-      timeRef.current = setTimeout(() => {
-        onClose();
-        setIsClosing(false);
-      }, ANIMATION_DELAY)
-    }
-  }, [onClose])
-
-  const onKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      closeHandler()
-    }
-  }, [closeHandler])
-
-  useEffect(() => {
-    if (isOpen) {
-      window.addEventListener('keydown', onKeyDown)
-    }
-
-    return () => {
-      clearTimeout(timeRef.current);
-      window.removeEventListener('keydown', onKeyDown)
-    }
-  }, [isOpen, onKeyDown])
+  const {
+    isClosing,
+    close,
+    isMounted
+  } = useModal({
+    animationDelay: ANIMATION_DELAY,
+    onClose,
+    isOpen
+  })
 
   const mods: Mods = {
     [cls.opened]: isOpen,
@@ -74,7 +48,7 @@ export const Modal = (props: ModalProps) => {
   return (
     <Portal>
       <div className={classNames(cls.modal, mods, [className, theme])}>
-        <Overlay onClick={closeHandler} />
+        <Overlay onClick={close} />
         <div className={cls.content}>
           {children}
         </div>
