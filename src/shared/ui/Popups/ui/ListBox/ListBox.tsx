@@ -6,6 +6,8 @@ import { Button } from "shared/ui/Button/Button";
 import { HStack } from "shared/ui/Stack";
 import { DropdownDirection } from "shared/types/ui";
 import SelectedIcon from 'shared/assets/icons/done.svg'
+import { mapDirectionClass } from "../../styles/consts";
+import popupCls from '../../styles/popup.module.scss';
 
 export interface ListBoxItem {
   value: string;
@@ -22,13 +24,6 @@ interface ListBoxProps {
   readonly?: boolean;
   direction?: DropdownDirection;
   label?: string;
-}
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'bottom left': cls.optionsBottomLeft,
-  'bottom right': cls.optionsBottomRight,
-  'top left': cls.optionTopLeft,
-  'top right': cls.optionsTopRight
 }
 
 export function ListBox(props: ListBoxProps) {
@@ -57,14 +52,14 @@ export function ListBox(props: ListBoxProps) {
 
       <HListBox
         as={'div'}
-        className={classNames(cls.listBox, {}, [className])}
+        className={classNames(cls.listBox, {}, [className, popupCls.popup])}
         value={value}
         onChange={onChange}
         disabled={readonly}
       >
         <HListBox.Button
           as={'span'}
-          className={cls.trigger}
+          className={popupCls.trigger}
           // disabled={readonly}
         >
           <Button disabled={readonly}>
@@ -83,8 +78,8 @@ export function ListBox(props: ListBoxProps) {
                 <li
                   className={
                     classNames(cls.item, {
-                      [cls.active]: active ,
-                      [cls.disabled]: item.disabled
+                      [popupCls.active]: active ,
+                      [popupCls.disabled]: item.disabled
                     })
                   }
                 >
