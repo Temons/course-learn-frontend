@@ -12,6 +12,7 @@
   "backToList": "backToList",
   "by": "by",
   "cancel": "cancel",
+  "close": "close",
   "comments": "comments",
   "commentsEmpty": "",
   "createArticle": "createArticle",
@@ -68,6 +69,7 @@
   "yourAvatar": "yourAvatar",
   "yourCity": "yourCity",
   "yourName": "yourName",
+  "yourReview": "yourReview",
   "yourSurname": "yourSurname",
   "Профиль не найден": "Профиль не найден"
 }

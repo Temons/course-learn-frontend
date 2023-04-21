@@ -1,0 +1,8 @@
+{
+  "close": "close",
+  "send": "send",
+  "setReview": "setReview",
+  "setYourStars": "setYourStars",
+  "thanksForRate": "thanksForRate",
+  "yourReview": "yourReview"
+}

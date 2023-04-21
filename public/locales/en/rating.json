@@ -1,5 +1,8 @@
 {
   "yourReview": "Your review",
   "close": "Close",
-  "send": "Send"
+  "send": "Send",
+  "setYourStars": "Set your stars",
+  "setReview": "Set your review, it's important!)",
+  "thanksForRate": "Thanks for rate!"
 }
