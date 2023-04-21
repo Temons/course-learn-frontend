@@ -1255,5 +1255,64 @@
       "username": "arttroqkljfb;elajfb",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2n1pP-KKfgW_ch97BmG6zdal9pCzXKtdSg&usqp=CAU"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "great article!",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "great article!",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "2",
+      "rate": 2,
+      "feedback": ",jhfvklhjv",
+      "id": "3fJ4Dor"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 5,
+      "id": "5NNukQP"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 2,
+      "feedback": "asca",
+      "id": "kVrs4fM"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "feedback": "qwedq",
+      "id": "eagF4kt"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "great article!",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "great article!",
+      "userId": "2",
+      "profileId": "2"
+    }
   ]
 }
