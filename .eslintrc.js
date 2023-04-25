@@ -52,7 +52,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
     "react/display-name": "off",
-    "arttraf-eslint-fsd-plugin/path-checker": "error"
+    "arttraf-eslint-fsd-plugin/path-checker": ["error", { alias: "@" }]
   },
   globals: {
     __IS_DEV__: true,
