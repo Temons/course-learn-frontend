@@ -1,16 +1,11 @@
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from "@/app/providers/StoreProvider"
-// TODO
-// eslint-disable-next-line arttraf-eslint-fsd-plugin/public-api-imports
-import { loginReducer } from "@/features/AuthByUsername/model/slice/loginSlice";
+import { loginReducer } from "@/features/AuthByUsername/testing";
 import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-// eslint-disable-next-line arttraf-eslint-fsd-plugin/public-api-imports
-import { articleDetailsReducer } from "@/entities/Article/model/slice/articleDetailsSlice";
-// eslint-disable-next-line arttraf-eslint-fsd-plugin/public-api-imports
-import { addCommentFormReducer } from "@/features/addCommentForm/model/slices/AddCommentFormSlice";
+import { articleDetailsReducer } from "@/entities/Article/testing";
+import { addCommentFormReducer } from "@/features/addCommentForm/testing";
 import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage";
-// eslint-disable-next-line arttraf-eslint-fsd-plugin/public-api-imports
-import { profileReducer } from "@/features/editableProfileCard/model/slice/profileSlice";
+import { profileReducer } from "@/features/editableProfileCard/testing";
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
