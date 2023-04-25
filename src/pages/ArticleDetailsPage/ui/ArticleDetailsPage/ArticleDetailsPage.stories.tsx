@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import ArticleDetailsPage  from './ArticleDetailsPage';
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import { Article, ArticleType } from "@/entities/Article";
-import { ArticleBlockType } from "@/entities/Article/model/consts/articlesConsts";
+import { ArticleBlockType } from "@/entities/Article";
 
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
