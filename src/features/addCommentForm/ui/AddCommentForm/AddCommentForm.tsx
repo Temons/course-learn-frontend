@@ -5,7 +5,6 @@ import { memo, useCallback } from "react";
 import { Input } from "@/shared/ui/Input/Input";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import {
-  getAddCommentFormError,
   getAddCommentFormText
 } from "../../model/selectors/addCommentFormSelector";
 import cls from './AddCommentForm.module.scss';
@@ -26,7 +25,6 @@ const reducers: ReducersList = {
 const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) => {
   const { t } = useTranslation();
   const text = useSelector(getAddCommentFormText);
-  const error = useSelector(getAddCommentFormError);
   const dispatch = useAppDispatch();
 
   const onCommentTextChange = useCallback((value: string) => {
