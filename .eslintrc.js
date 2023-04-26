@@ -53,6 +53,13 @@ module.exports = {
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
     "react/display-name": "off",
     "arttraf-eslint-fsd-plugin/path-checker": ["error", { alias: "@" }],
+    "arttraf-eslint-fsd-plugin/layer-imports": [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
     "arttraf-eslint-fsd-plugin/public-api-imports": [
       "error",
       {
