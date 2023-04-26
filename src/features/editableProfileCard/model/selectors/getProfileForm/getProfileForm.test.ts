@@ -1,5 +1,6 @@
-import { StateSchema } from "@/app/providers/StoreProvider";
 import { getProfileForm } from "./getProfileForm";
+
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { Currency } from "@/entities/Currency";
 
 describe('getProfileForm test', () => {

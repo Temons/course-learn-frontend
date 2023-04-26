@@ -1,11 +1,12 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
-import LightIcon from '@/shared/assets/icons/theme-light.svg';
-import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
-import OrangeIcon from '@/shared/assets/icons/theme-orange.svg';
-import { Button, ButtonTheme } from "@/shared/ui/Button";
 import { memo } from "react";
+
+import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
+import LightIcon from '@/shared/assets/icons/theme-light.svg';
+import OrangeIcon from '@/shared/assets/icons/theme-orange.svg';
 import { Theme } from "@/shared/const/theme";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 
 interface ThemeSwitcherProps {
     className? : string;

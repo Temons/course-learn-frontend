@@ -1,5 +1,6 @@
-import { Profile } from "@/entities/Profile";
 import { ValidateProfileError } from "../consts/consts";
+
+import { Profile } from "@/entities/Profile";
 
 export interface ProfileSchema {
   data?: Profile;
