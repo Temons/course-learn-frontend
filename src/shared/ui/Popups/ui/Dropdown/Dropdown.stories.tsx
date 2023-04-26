@@ -1,6 +1,8 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
+
 import { Dropdown } from './Dropdown';
+
 import { Button } from "@/shared/ui/Button";
 
 export default {

@@ -20,7 +20,9 @@ module.exports = {
     "@typescript-eslint",
     "i18next",
     "react-hooks",
-    "arttraf-eslint-fsd-plugin"
+    "arttraf-eslint-fsd-plugin",
+    "unused-imports",
+    "import"
   ],
   "rules": {
     "react/jsx-indent": [2, 2],
@@ -29,6 +31,7 @@ module.exports = {
     "object-curly-spacing": ["error", "always"],
     "@typescript-eslint/ban-ts-comment": "warn",
     "no-undef": "off",
+    "unused-imports/no-unused-imports": "error",
     "i18next/no-literal-string": [
       'error',
       {
@@ -66,7 +69,23 @@ module.exports = {
         alias: "@",
         testFilesPatterns: ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
       },
-    ]
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        }
+      }
+    ],
   },
   globals: {
     __IS_DEV__: true,

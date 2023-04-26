@@ -1,7 +1,9 @@
 import path from 'path';
+
 import webpack from 'webpack';
-import { BuildPaths, BuildEnv } from './config/build/types/config';
+
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import { BuildPaths, BuildEnv } from './config/build/types/config';
 
 export default (env: BuildEnv) => {
 
@@ -15,11 +17,11 @@ export default (env: BuildEnv) => {
     favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
     buildFavicon: path.resolve(__dirname, 'build', 'favicon.ico')
   }
-  
+
   const mode = env.mode || 'development';
   const PORT = env.port || 3000;
   const apiUrl = env.apiUrl || 'http://localhost:8000';
-  
+
   const isDev = mode === 'development';
 
   const config: webpack.Configuration = buildWebpackConfig({
@@ -30,6 +32,6 @@ export default (env: BuildEnv) => {
     port: PORT,
     project: 'frontend'
   })
-  
+
   return config;
 }

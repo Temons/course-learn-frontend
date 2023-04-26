@@ -1,12 +1,16 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
 import { HTMLAttributeAnchorTarget, memo } from "react";
-import cls from './ArticleList.module.scss';
+import { useTranslation } from "react-i18next";
+
+import { ArticleView } from "../../model/consts/articlesConsts";
 import { Article } from "../../model/types/article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
+
+
+import cls from './ArticleList.module.scss';
+
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { Text, TextSize } from "@/shared/ui/Text";
-import { useTranslation } from "react-i18next";
-import { ArticleView } from "../../model/consts/articlesConsts";
 
 interface ArticleListProps {
   className?: string;

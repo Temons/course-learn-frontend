@@ -1,14 +1,17 @@
-import { classNames, Mods } from "@/shared/lib/classNames/classNames";
-import cls from './ProfileCard.module.scss';
-import { Text, TextAlign, TextTheme } from "@/shared/ui/Text";
 import { useTranslation } from "react-i18next";
-import { Input } from "@/shared/ui/Input";
+
 import { Profile } from "../../model/types/profile";
-import { Loader } from "@/shared/ui/Loader";
-import { Avatar } from "@/shared/ui/Avatar";
-import { Currency, CurrencySelect } from "@/entities/Currency";
+
+import cls from './ProfileCard.module.scss';
+
 import { Country, CountrySelect } from "@/entities/Country";
+import { Currency, CurrencySelect } from "@/entities/Currency";
+import { classNames, Mods } from "@/shared/lib/classNames/classNames";
+import { Avatar } from "@/shared/ui/Avatar";
+import { Input } from "@/shared/ui/Input";
+import { Loader } from "@/shared/ui/Loader";
 import { HStack, VStack } from "@/shared/ui/Stack";
+import { Text, TextAlign, TextTheme } from "@/shared/ui/Text";
 
 interface ProfileCardProps {
     className? : string;

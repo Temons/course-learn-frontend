@@ -1,9 +1,13 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo } from "react";
+
+import { ArticleView } from "../../model/consts/articlesConsts";
+
 import cls from './ArticleListItem.module.scss';
+
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { Card } from "@/shared/ui/Card";
 import { Skeleton } from "@/shared/ui/Skeleton";
-import { ArticleView } from "../../model/consts/articlesConsts";
+
 
 interface ArticleListItemSkeletonProps {
   className?: string;
