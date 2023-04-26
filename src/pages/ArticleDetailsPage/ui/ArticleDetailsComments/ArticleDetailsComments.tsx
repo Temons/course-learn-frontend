@@ -1,6 +1,6 @@
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo, Suspense, useCallback } from "react";
-import { Text } from "@/shared/ui/Text/Text";
+import { Text } from "@/shared/ui/Text";
 import { AddCommentForm } from "@/features/addCommentForm";
 import { CommentList } from "@/entities/Comment";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
@@ -14,7 +14,7 @@ import {
   fetchCommentsByArticleId
 } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { VStack } from "@/shared/ui/Stack";
-import { Loader } from "@/shared/ui/Loader/Loader";
+import { Loader } from "@/shared/ui/Loader";
 
 interface ArticleDetailsCommentsProps {
   className?: string;
