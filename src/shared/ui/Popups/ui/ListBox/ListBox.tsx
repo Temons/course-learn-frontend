@@ -2,7 +2,7 @@ import { Fragment, ReactNode, useMemo } from 'react'
 import { Listbox as HListBox } from '@headlessui/react';
 import cls from './ListBox.module.scss';
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Button } from "@/shared/ui/Button/Button";
+import { Button } from "@/shared/ui/Button";
 import { HStack } from "@/shared/ui/Stack";
 import { DropdownDirection } from "@/shared/types/ui";
 import SelectedIcon from '@/shared/assets/icons/done.svg'

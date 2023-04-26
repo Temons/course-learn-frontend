@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
-import { Input } from "@/shared/ui/Input/Input";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Input } from "@/shared/ui/Input";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 import {
   getAddCommentFormText
 } from "../../model/selectors/addCommentFormSelector";
