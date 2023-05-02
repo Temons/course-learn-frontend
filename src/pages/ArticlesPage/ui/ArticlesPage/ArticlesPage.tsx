@@ -15,9 +15,6 @@ import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { Page } from "@/widgets/Page";
 
-
-
-
 interface ArticlesPageProps {
   className?: string;
 }
