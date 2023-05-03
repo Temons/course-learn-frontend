@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
-  getArticlesPageSort, getArticlesPageType,
+  getArticlesPageSort,
+  getArticlesPageType,
   getArticlesPageView
 } from "../../model/selectors/articlesPageSelectors";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
@@ -15,12 +16,12 @@ import cls from './ArticlesPageFilters.module.scss';
 
 import {
   ArticleSortField,
-  ArticleSortSelector,
   ArticleView,
-  ArticleViewSelector,
   ArticleType,
-  ArticleTypeTabs
 } from "@/entities/Article";
+import { ArticleSortSelector } from "@/features/ArticleSortSelector";
+import { ArticleTypeTabs } from "@/features/ArticleTypeTabs";
+import { ArticleViewSelector } from "@/features/ArticleViewSelector";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
@@ -75,7 +76,7 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     fetchData();
   }, [dispatch, fetchData]);
 
-  
+
   return (
     <div className={classNames(cls.articlesPageFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
