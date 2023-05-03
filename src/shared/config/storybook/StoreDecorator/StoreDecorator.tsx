@@ -5,8 +5,7 @@ import { articleDetailsReducer } from "@/entities/Article/testing";
 import { loginReducer } from "@/features/AuthByUsername/testing";
 import { addCommentFormReducer } from "@/features/addCommentForm/testing";
 import { profileReducer } from "@/features/editableProfileCard/testing";
-// eslint-disable-next-line arttraf-eslint-fsd-plugin/layer-imports
-import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage";
+import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage/testing";
 import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 
 const defaultAsyncReducers: ReducersList = {
