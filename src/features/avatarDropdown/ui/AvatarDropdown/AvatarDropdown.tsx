@@ -5,14 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import cls from './AvatarDropdown.module.scss';
 
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from "@/entities/User";
-import { RoutePath } from "@/shared/const/router";
+import { getRouteAdminPanel, getRouteProfile } from "@/shared/const/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Avatar } from "@/shared/ui/Avatar";
 import { Dropdown } from "@/shared/ui/Popups";
-
-
-
-
 
 interface AvatarDropdownProps {
   className?: string;
@@ -42,12 +38,12 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
           ...(isAdminPanelAvailable ? [
             {
               content: t('adminPanel'),
-              href: RoutePath.admin_panel
+              href: getRouteAdminPanel()
             }
           ] : []),
           {
             content: t('profile'),
-            href: RoutePath.profile + authData.id
+            href: getRouteProfile(authData.id)
           },
           {
             content: t('logOut'),

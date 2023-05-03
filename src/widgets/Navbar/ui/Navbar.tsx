@@ -8,7 +8,7 @@ import { getUserAuthData } from "@/entities/User";
 import { LoginModal } from "@/features/AuthByUsername";
 import { AvatarDropdown } from "@/features/avatarDropdown";
 import { NotificationButton } from "@/features/notificationButton";
-import { RoutePath } from "@/shared/const/router";
+import { getRouteArticleCreate } from "@/shared/const/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
 import { Button, ButtonTheme } from "@/shared/ui/Button";
@@ -41,7 +41,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           theme={TextTheme.INVERTED}
         />
         <AppLink
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.SECONDARY}
         >
           {t('createArticle')}
@@ -58,8 +58,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   return (
     <header className={classNames(cls.navbar, {}, [className])}>
       <Button
-        theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
+        theme={ButtonTheme.CLEAR_INVERTED}
         onClick={onShowModal}
       >
         {t('logIn')}
