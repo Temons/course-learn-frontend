@@ -76,7 +76,6 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     fetchData();
   }, [dispatch, fetchData]);
 
-
   return (
     <div className={classNames(cls.articlesPageFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
