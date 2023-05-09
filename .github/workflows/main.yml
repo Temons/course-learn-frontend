@@ -60,7 +60,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
@@ -102,7 +102,7 @@ jobs:
         uses: actions/deploy-pages@v1
 
   checks:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
