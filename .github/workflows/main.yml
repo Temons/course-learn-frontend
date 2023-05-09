@@ -75,7 +75,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm ci --force
+        run: npm install
       - name: build production project
         run: npm run build:prod
         if: always()
@@ -113,7 +113,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm ci --force
+        run: npm install
       - name: linting typescript
         run: npm run lint:ts
         if: always()
