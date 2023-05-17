@@ -1230,6 +1230,15 @@
         "MANAGER"
       ],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2n1pP-KKfgW_ch97BmG6zdal9pCzXKtdSg&usqp=CAU"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://s3.amazonaws.com/kinlane-productions2/bw-icons/bw-test-user.png"
     }
   ],
   "profile": [
