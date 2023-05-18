@@ -46,17 +46,20 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
         max
         justify={'between'}
         className={classNames(cls.addCommentForm, {}, [className])}
+        data-testid={'AddCommentForm'}
       >
         <Input
           className={cls.input}
           placeholder={t('inputComment')}
           value={text}
           onChange={onCommentTextChange}
+          data-testid={'AddCommentForm.Input'}
         />
 
         <Button
           theme={ButtonTheme.OUTLINE}
           onClick={onSendHandler}
+          data-testid={'AddCommentForm.Button'}
         >
           {t('send')}
         </Button>

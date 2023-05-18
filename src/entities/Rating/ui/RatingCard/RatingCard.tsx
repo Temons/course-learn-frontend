@@ -12,10 +12,6 @@ import { HStack, VStack } from "@/shared/ui/Stack";
 import { StarRating } from "@/shared/ui/StarRating";
 import { Text } from "@/shared/ui/Text";
 
-
-
-
-
 interface RatingCardProps {
   className?: string;
   title?: string;
@@ -67,12 +63,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
         placeholder={t('yourReview')}
         value={feedback}
         onChange={setFeedback}
+        data-testid={'RatingCard.Input'}
       />
     </>
   )
 
   return (
-    <Card max className={classNames('', {}, [className])}>
+    <Card
+      max
+      className={classNames('', {}, [className])}
+      data-testid={'RatingCard'}
+    >
       <VStack align='center' gap='8'>
         <Text title={starsCount ? t('thanksForRate') : title} />
         <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
@@ -83,10 +84,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
           <VStack max gap='32'>
             {modalContent}
             <HStack max gap='16' justify='end'>
-              <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED}>
+              <Button
+                data-testid={'RatingCard.Close'}
+                onClick={cancelHandle}
+                theme={ButtonTheme.OUTLINE_RED}
+              >
                 {t('close')}
               </Button>
-              <Button onClick={acceptHandle}>
+              <Button
+                data-testid={'RatingCard.Send'}
+                onClick={acceptHandle}
+              >
                 {t('send')}
               </Button>
             </HStack>
