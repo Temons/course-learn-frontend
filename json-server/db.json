@@ -1263,6 +1263,17 @@
       "city": "Corroios",
       "username": "arttroqkljfb;elajfb",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2n1pP-KKfgW_ch97BmG6zdal9pCzXKtdSg&usqp=CAU"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
+      "age": 31,
+      "currency": "EUR",
+      "country": "Ukraine",
+      "city": "Corroios",
+      "username": "testuser",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2n1pP-KKfgW_ch97BmG6zdal9pCzXKtdSg&usqp=CAU"
     }
   ],
   "article-ratings": [
