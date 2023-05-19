@@ -10,11 +10,15 @@ export default {
     backgroundColor: { control: 'color' },
   },
   decorators: [
-    (Story) => <div style={{ padding: 100 }}><Story /></div>
-  ]
+    Story => (
+      <div style={{ padding: 100 }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = args => <ListBox {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -23,8 +27,8 @@ Normal.args = {
     { content: '1fgwegw 2w;oifnw;gjnewr', value: '12ewf' },
     { content: '412w;oifnwsdv;gjnewr', value: '12sdvewf' },
     { content: 'wef12w;oifnw;gjnewr', value: '5152esdvwf' },
-    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' }
-  ]
+    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' },
+  ],
 };
 
 export const TopLeft = Template.bind({});
@@ -35,8 +39,8 @@ TopLeft.args = {
     { content: '1fgwegw 2w;oifnw;gjnewr', value: '12ewf' },
     { content: '412w;oifnwsdv;gjnewr', value: '12sdvewf' },
     { content: 'wef12w;oifnw;gjnewr', value: '5152esdvwf' },
-    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' }
-  ]
+    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' },
+  ],
 };
 
 export const TopRight = Template.bind({});
@@ -47,8 +51,8 @@ TopRight.args = {
     { content: '1fgwegw 2w;oifnw;gjnewr', value: '12ewf' },
     { content: '412w;oifnwsdv;gjnewr', value: '12sdvewf' },
     { content: 'wef12w;oifnw;gjnewr', value: '5152esdvwf' },
-    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' }
-  ]
+    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' },
+  ],
 };
 
 export const BottomLeft = Template.bind({});
@@ -59,8 +63,8 @@ BottomLeft.args = {
     { content: '1fgwegw 2w;oifnw;gjnewr', value: '12ewf' },
     { content: '412w;oifnwsdv;gjnewr', value: '12sdvewf' },
     { content: 'wef12w;oifnw;gjnewr', value: '5152esdvwf' },
-    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' }
-  ]
+    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' },
+  ],
 };
 
 export const BottomRight = Template.bind({});
@@ -71,6 +75,6 @@ BottomRight.args = {
     { content: '1fgwegw 2w;oifnw;gjnewr', value: '12ewf' },
     { content: '412w;oifnwsdv;gjnewr', value: '12sdvewf' },
     { content: 'wef12w;oifnw;gjnewr', value: '5152esdvwf' },
-    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' }
-  ]
+    { content: '5512w;oifnw;gjnewr', value: '13r2swewf' },
+  ],
 };

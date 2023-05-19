@@ -2,12 +2,12 @@ import { Project } from 'ts-morph';
 
 const project = new Project();
 
-project.addSourceFilesAtPaths('src/**/*.ts')
-project.addSourceFilesAtPaths('src/**/*.tsx')
+project.addSourceFilesAtPaths('src/**/*.ts');
+project.addSourceFilesAtPaths('src/**/*.tsx');
 
 const files = project.getSourceFiles();
 
-function isAbsolute (value: string) {
+function isAbsolute(value: string) {
   const layers = ['app', 'shared', 'features', 'entities', 'pages', 'widgets'];
   return layers.some(layer => value.startsWith(layer));
 }
@@ -19,9 +19,9 @@ files.forEach(sourceFile => {
     const value = importDeclaration.getModuleSpecifierValue();
 
     if (isAbsolute(value)) {
-      return importDeclaration.setModuleSpecifier('@/' + value)
+      return importDeclaration.setModuleSpecifier('@/' + value);
     }
-  })
-})
+  });
+});
 
 project.save();

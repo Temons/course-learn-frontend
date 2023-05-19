@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface useModalProps {
   onClose?: () => void;
@@ -6,11 +6,7 @@ interface useModalProps {
   animationDelay: number;
 }
 export function useModal(props: useModalProps) {
-  const {
-    onClose,
-    isOpen,
-    animationDelay
-  } = props;
+  const { onClose, isOpen, animationDelay } = props;
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -28,30 +24,33 @@ export function useModal(props: useModalProps) {
       timeRef.current = setTimeout(() => {
         onClose();
         setIsClosing(false);
-      }, animationDelay )
+      }, animationDelay);
     }
-  }, [animationDelay, onClose])
+  }, [animationDelay, onClose]);
 
-  const onKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      close()
-    }
-  }, [close])
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    },
+    [close],
+  );
 
   useEffect(() => {
     if (isOpen) {
-      window.addEventListener('keydown', onKeyDown)
+      window.addEventListener('keydown', onKeyDown);
     }
 
     return () => {
       clearTimeout(timeRef.current);
-      window.removeEventListener('keydown', onKeyDown)
-    }
-  }, [isOpen, onKeyDown])
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isOpen, onKeyDown]);
 
   return {
     isClosing,
     isMounted,
-    close
-  }
+    close,
+  };
 }

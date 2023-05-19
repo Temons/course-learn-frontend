@@ -1,103 +1,107 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:i18next/recommended"
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:i18next/recommended',
+    'prettier',
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "i18next",
-    "react-hooks",
-    "arttraf-eslint-fsd-plugin",
-    "unused-imports",
-    "import"
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'arttraf-eslint-fsd-plugin',
+    'unused-imports',
+    'import',
   ],
-  "rules": {
-    "react/jsx-indent": [2, 2],
-    "indent": [2, 2],
-    "react/react-in-jsx-scope": "off",
-    "object-curly-spacing": ["error", "always"],
-    "@typescript-eslint/ban-ts-comment": "warn",
-    "no-undef": "off",
-    "unused-imports/no-unused-imports": "error",
-    "i18next/no-literal-string": [
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'object-curly-spacing': ['error', 'always'],
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    'no-undef': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'i18next/no-literal-string': [
       'error',
       {
         markupOnly: true,
         ignoreAttribute: [
           'data-testid',
-          "to",
-          "name",
-          "target",
-          "justify",
-          "align",
-          "direction",
-          "gap",
-          "role",
-          "as",
-          "border"
-        ]
-      }
+          'to',
+          'name',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+          'role',
+          'as',
+          'border',
+        ],
+      },
     ],
-    "@typescript-eslint/no-var-requires": "off",
-    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
-    "react/display-name": "off",
-    "arttraf-eslint-fsd-plugin/path-checker": ["error", { alias: "@" }],
-    "arttraf-eslint-fsd-plugin/layer-imports": [
+    '@typescript-eslint/no-var-requires': 'off',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+    'react/display-name': 'off',
+    'arttraf-eslint-fsd-plugin/path-checker': ['error', { alias: '@' }],
+    'arttraf-eslint-fsd-plugin/layer-imports': [
       'error',
       {
         alias: '@',
         ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
       },
     ],
-    "arttraf-eslint-fsd-plugin/public-api-imports": [
-      "error",
+    'arttraf-eslint-fsd-plugin/public-api-imports': [
+      'error',
       {
-        alias: "@",
-        testFilesPatterns: ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.story.*',
+          '**/StoreDecorator.tsx',
+        ],
       },
     ],
-    "import/order": [
-      "error",
+    'import/order': [
+      'error',
       {
-        "pathGroups": [
+        pathGroups: [
           {
-            "pattern": "@/**",
-            "group": "internal"
-          }
+            pattern: '@/**',
+            group: 'internal',
+          },
         ],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": false
-        }
-      }
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: false,
+        },
+      },
     ],
+    'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
   },
   globals: {
     __IS_DEV__: true,
     __API__: true,
-    __PROJECT__: true
+    __PROJECT__: true,
   },
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
-        'i18next/no-literal-string': 'off'
-      }
-    }
-  ]
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };

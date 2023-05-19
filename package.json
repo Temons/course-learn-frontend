@@ -11,6 +11,7 @@
     "start:dev:server": "node json-server/index.js",
     "build:prod": "webpack  --env mode=production apiUrl=https://production-project-server-liart.vercel.app/",
     "build:dev": "webpack  --env mode=development",
+    "prettier": "npx prettier --write \"**/*.{ts,tsx,json}\"",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix\n",
     "lint:scss": "npx stylelint \"**/*.scss\"",
@@ -30,7 +31,10 @@
     "postinstall": "node ./scripts/clear-cache.js"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "eslint"
+    "**/*.{ts,tsx}": [
+      "prettier --list-different",
+      "eslint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -75,6 +79,7 @@
     "css-loader": "^6.6.0",
     "cypress": "^11.0.0",
     "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-arttraf-eslint-fsd-plugin": "^0.0.17",
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-import": "^2.27.5",
@@ -93,6 +98,7 @@
     "lint-staged": "^13.0.3",
     "loki": "^0.31.2",
     "mini-css-extract-plugin": "^2.5.3",
+    "prettier": "2.8.8",
     "react-redux": "^8.0.5",
     "react-refresh": "^0.12.0",
     "reg-cli": "^0.17.6",

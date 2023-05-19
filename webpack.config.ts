@@ -6,7 +6,6 @@ import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildPaths, BuildEnv } from './config/build/types/config';
 
 export default (env: BuildEnv) => {
-
   const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'build'),
@@ -15,8 +14,8 @@ export default (env: BuildEnv) => {
     locales: path.resolve(__dirname, 'public', 'locales'),
     buildLocales: path.resolve(__dirname, 'build', 'locales'),
     favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
-    buildFavicon: path.resolve(__dirname, 'build', 'favicon.ico')
-  }
+    buildFavicon: path.resolve(__dirname, 'build', 'favicon.ico'),
+  };
 
   const mode = env?.mode || 'development';
   const PORT = env?.port || 3000;
@@ -30,8 +29,8 @@ export default (env: BuildEnv) => {
     isDev,
     apiUrl,
     port: PORT,
-    project: 'frontend'
-  })
+    project: 'frontend',
+  });
 
   return config;
-}
+};

@@ -11,19 +11,20 @@ export default {
   },
 } as ComponentMeta<typeof Code>;
 
-const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
+const Template: ComponentStory<typeof Code> = args => <Code {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
-  text: ';\n' +
-    'import { ComponentMeta, ComponentStory } from \'@storybook/react\';\n' +
-    'import { Code } from \'./Code\';\n' +
+  text:
+    ';\n' +
+    "import { ComponentMeta, ComponentStory } from '@storybook/react';\n" +
+    "import { Code } from './Code';\n" +
     '\n' +
     'export default {\n' +
-    '  title: \'shared/Code\',\n' +
+    "  title: 'shared/Code',\n" +
     '  component: Code,\n' +
     '  argTypes: {\n' +
-    '    backgroundColor: { control: \'color\' }\n' +
+    "    backgroundColor: { control: 'color' }\n" +
     '  }\n' +
     '} as ComponentMeta<typeof Code>;\n' +
     '\n' +
@@ -32,5 +33,5 @@ Normal.args = {
     'export const Normal = Template.bind({});\n' +
     'Normal.args = {\n' +
     '  children:\n' +
-    '};\n'
+    '};\n',
 };

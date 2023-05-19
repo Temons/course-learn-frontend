@@ -1,16 +1,16 @@
-import { fetchProfileData } from "./fetchProfileData";
+import { fetchProfileData } from './fetchProfileData';
 
-import { Currency } from "@/entities/Currency";
-import { TestAsyncThunk } from "@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
+import { Currency } from '@/entities/Currency';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 const data = {
   username: 'Username',
   age: 42,
-  city: "Lisbon",
+  city: 'Lisbon',
   lastname: 'lastname',
   first: 'first',
   currency: Currency.EUR,
-}
+};
 
 describe('fetchProfileData test', () => {
   test('works correctly with correct data', async () => {
@@ -21,8 +21,8 @@ describe('fetchProfileData test', () => {
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
-    expect(result.payload).toEqual(data)
-  })
+    expect(result.payload).toEqual(data);
+  });
 
   test('works correctly with error', async () => {
     const thunk = new TestAsyncThunk(fetchProfileData);
@@ -30,5 +30,5 @@ describe('fetchProfileData test', () => {
 
     const result = await thunk.callThunk('1');
     expect(result.meta.requestStatus).toBe('rejected');
-  })
-})
+  });
+});

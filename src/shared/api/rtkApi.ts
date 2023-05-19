@@ -1,6 +1,6 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { USER_LOCALSTORAGE_KEY } from "@/shared/const/localStorage";
+import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localStorage';
 
 export const rtkApi = createApi({
   reducerPath: 'api',
@@ -12,7 +12,7 @@ export const rtkApi = createApi({
         headers.set('Authorization', token);
       }
       return headers;
-    }
+    },
   }),
-  endpoints: (builder) => ({}),
-})
+  endpoints: builder => ({}),
+});

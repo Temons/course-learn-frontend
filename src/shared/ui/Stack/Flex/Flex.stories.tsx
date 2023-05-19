@@ -11,7 +11,7 @@ export default {
   },
 } as ComponentMeta<typeof Flex>;
 
-const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />;
+const Template: ComponentStory<typeof Flex> = args => <Flex {...args} />;
 
 export const Row = Template.bind({});
 Row.args = {
@@ -23,12 +23,12 @@ Row.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const RowGap4 = Template.bind({});
 RowGap4.args = {
-  gap: "4",
+  gap: '4',
   children: (
     <>
       <p>123</p>
@@ -37,12 +37,12 @@ RowGap4.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const RowGap8 = Template.bind({});
 RowGap8.args = {
-  gap: "8",
+  gap: '8',
   children: (
     <>
       <p>123</p>
@@ -51,12 +51,12 @@ RowGap8.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const RowGap16 = Template.bind({});
 RowGap16.args = {
-  gap: "16",
+  gap: '16',
   children: (
     <>
       <p>123</p>
@@ -65,12 +65,12 @@ RowGap16.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const RowGap32 = Template.bind({});
 RowGap32.args = {
-  gap: "32",
+  gap: '32',
   children: (
     <>
       <p>123</p>
@@ -79,12 +79,12 @@ RowGap32.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const Column = Template.bind({});
 Column.args = {
-  direction: "column",
+  direction: 'column',
   children: (
     <>
       <p>123</p>
@@ -93,13 +93,13 @@ Column.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
 
 export const ColumnGap8 = Template.bind({});
 ColumnGap8.args = {
-  direction: "column",
-  gap: "8",
+  direction: 'column',
+  gap: '8',
   children: (
     <>
       <p>123</p>
@@ -108,6 +108,5 @@ ColumnGap8.args = {
       <p>543</p>
       <p>246</p>
     </>
-  )
+  ),
 };
-

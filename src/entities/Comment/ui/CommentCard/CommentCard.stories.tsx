@@ -3,8 +3,8 @@ import React from 'react';
 
 import { CommentCard } from './CommentCard';
 
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/shared/const/theme";
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
   title: 'entities/Comment/CommentCard',
@@ -14,47 +14,50 @@ export default {
   },
 } as ComponentMeta<typeof CommentCard>;
 
-const Template: ComponentStory<typeof CommentCard> = (args) => <CommentCard {...args} />;
+const Template: ComponentStory<typeof CommentCard> = args => (
+  <CommentCard {...args} />
+);
 const comment = {
-  id: "46",
-  text: "lorem text",
+  id: '46',
+  text: 'lorem text',
   user: {
     id: '42',
     username: 'username string',
-    avatar: 'https://eimg.pravda.com/images/doc/9/9/991c35e-white-hackers-690.jpg',
-  }
-}
+    avatar:
+      'https://eimg.pravda.com/images/doc/9/9/991c35e-white-hackers-690.jpg',
+  },
+};
 export const Normal = Template.bind({});
 Normal.args = {
-  comment
+  comment,
 };
 
 export const LoadingNormal = Template.bind({});
 LoadingNormal.args = {
   comment,
-  isLoading: true
+  isLoading: true,
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-  comment
+  comment,
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const LoadingDark = Template.bind({});
 LoadingDark.args = {
-  isLoading: true
+  isLoading: true,
 };
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Orange = Template.bind({});
 Orange.args = {
-  comment
+  comment,
 };
 Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
 
 export const LoadingOrange = Template.bind({});
 LoadingOrange.args = {
-  isLoading: true
+  isLoading: true,
 };
 LoadingOrange.decorators = [ThemeDecorator(Theme.ORANGE)];

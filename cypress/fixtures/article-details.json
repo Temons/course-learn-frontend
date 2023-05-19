@@ -6,9 +6,7 @@
   "views": 1022,
   "userId": "1",
   "createdAt": "26.02.2022",
-  "type": [
-    "IT"
-  ],
+  "type": ["IT"],
   "blocks": [
     {
       "id": "8",
@@ -29,9 +27,7 @@
     "id": "1",
     "username": "admin",
     "password": "123",
-    "roles": [
-      "ADMIN"
-    ],
+    "roles": ["ADMIN"],
     "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
   }
 }

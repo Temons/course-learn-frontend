@@ -1,50 +1,42 @@
-import { memo, useMemo, useState } from "react";
-import { useSelector } from "react-redux";
+import { memo, useMemo, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import { getSidebarItems } from "../../model/selectors/getSidebarItems";
-import { SidebarItem } from "../SidebarItem/SidebarItem";
+import { getSidebarItems } from '../../model/selectors/getSidebarItems';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 import cls from './Sidebar.module.scss';
 
-import { LangSwitcher } from "@/features/LangSwitcher";
-import { ThemeSwitcher } from "@/features/ThemeSwitcher";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Button, ButtonSize, ButtonTheme } from "@/shared/ui/Button";
-import { VStack } from "@/shared/ui/Stack";
+import { LangSwitcher } from '@/features/LangSwitcher';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
+import { VStack } from '@/shared/ui/Stack';
 
 interface SidebarProps {
-    className? : string;
+  className?: string;
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const sidebarItemsList = useSelector(getSidebarItems);
   const onToggle = () => {
-    setCollapsed(prevState => !prevState)
-  }
-
+    setCollapsed(prevState => !prevState);
+  };
 
   const itemsList = useMemo(() => {
-    return sidebarItemsList.map((item) => (
-      <SidebarItem
-        item={item}
-        collapsed={collapsed}
-        key={item.path}
-      />
-    ))
-
+    return sidebarItemsList.map(item => (
+      <SidebarItem item={item} collapsed={collapsed} key={item.path} />
+    ));
   }, [collapsed, sidebarItemsList]);
 
   return (
     <aside
       data-testid="sidebar"
-      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
+      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+        className,
+      ])}
     >
-      <VStack
-        gap="8"
-        role="navigation"
-        className={cls.items}
-      >
+      <VStack gap="8" role="navigation" className={cls.items}>
         {itemsList}
       </VStack>
 
