@@ -28,9 +28,6 @@ import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitial
 import { VStack } from "@/shared/ui/Stack";
 import { Text, TextTheme } from "@/shared/ui/Text";
 
-
-
-
 interface EditableProfileCardProps {
   className?: string;
   id?: string;

@@ -18,9 +18,9 @@ export default (env: BuildEnv) => {
     buildFavicon: path.resolve(__dirname, 'build', 'favicon.ico')
   }
 
-  const mode = env.mode || 'development';
-  const PORT = env.port || 3000;
-  const apiUrl = env.apiUrl || 'http://localhost:8000';
+  const mode = env?.mode || 'development';
+  const PORT = env?.port || 3000;
+  const apiUrl = env?.apiUrl || 'http://localhost:8000';
 
   const isDev = mode === 'development';
 
