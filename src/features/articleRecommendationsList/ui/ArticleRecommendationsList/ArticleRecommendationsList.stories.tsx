@@ -3,8 +3,8 @@ import React from 'react';
 
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
-import { Article } from "@/entities/Article";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import { Article } from '@/entities/Article';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
   title: 'features/ArticleRecommendationsList',
@@ -14,21 +14,24 @@ export default {
   },
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = args => (
+  <ArticleRecommendationsList {...args} />
+);
 
-const article:Article = {
+const article: Article = {
   id: '1',
   img: '',
   createdAt: '',
   views: 145,
   user: {
-    id: '1', username: '123'
+    id: '1',
+    username: '123',
   },
   blocks: [],
   type: [],
   title: '12445',
-  subtitle: 'kwjefbwef'
-}
+  subtitle: 'kwjefbwef',
+};
 
 export const Normal = Template.bind({});
 Normal.args = {};
@@ -43,7 +46,7 @@ Normal.parameters = {
         { ...article, id: '1' },
         { ...article, id: '2' },
         { ...article, id: '3' },
-      ]
-    }
-  ]
-}
+      ],
+    },
+  ],
+};

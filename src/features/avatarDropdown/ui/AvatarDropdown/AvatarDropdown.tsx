@@ -1,14 +1,19 @@
-import { memo, useCallback } from "react";
-import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
+import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 
 import cls from './AvatarDropdown.module.scss';
 
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from "@/entities/User";
-import { getRouteAdminPanel, getRouteProfile } from "@/shared/const/router";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Avatar } from "@/shared/ui/Avatar";
-import { Dropdown } from "@/shared/ui/Popups";
+import {
+  getUserAuthData,
+  isUserAdmin,
+  isUserManager,
+  userActions,
+} from '@/entities/User';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Dropdown } from '@/shared/ui/Popups';
 
 interface AvatarDropdownProps {
   className?: string;
@@ -23,7 +28,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
   const authData = useSelector(getUserAuthData);
 
   const onLogout = useCallback(() => {
-    dispatch(userActions.logout())
+    dispatch(userActions.logout());
   }, [dispatch]);
 
   if (!authData) {
@@ -33,22 +38,24 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
   return (
     <div className={classNames(cls.avatarDropdown, {}, [className])}>
       <Dropdown
-        direction='bottom left'
+        direction="bottom left"
         items={[
-          ...(isAdminPanelAvailable ? [
-            {
-              content: t('adminPanel'),
-              href: getRouteAdminPanel()
-            }
-          ] : []),
+          ...(isAdminPanelAvailable
+            ? [
+                {
+                  content: t('adminPanel'),
+                  href: getRouteAdminPanel(),
+                },
+              ]
+            : []),
           {
             content: t('profile'),
-            href: getRouteProfile(authData.id)
+            href: getRouteProfile(authData.id),
           },
           {
             content: t('logOut'),
-            onClick: onLogout
-          }
+            onClick: onLogout,
+          },
         ]}
         trigger={<Avatar size={30} fallbackInverted src={authData.avatar} />}
       />

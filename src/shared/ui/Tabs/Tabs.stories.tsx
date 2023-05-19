@@ -1,9 +1,8 @@
-import { action } from "@storybook/addon-actions";
+import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
 import { Tabs } from './Tabs';
-
 
 export default {
   title: 'shared/Tabs',
@@ -13,24 +12,24 @@ export default {
   },
 } as ComponentMeta<typeof Tabs>;
 
-const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
+const Template: ComponentStory<typeof Tabs> = args => <Tabs {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
   tabs: [
     {
       value: 'value 1',
-      content: 'content 1'
+      content: 'content 1',
     },
     {
       value: 'value 2',
-      content: 'content 2'
+      content: 'content 2',
     },
     {
       value: 'value 3',
-      content: 'content 3'
+      content: 'content 3',
     },
   ],
   value: 'value 2',
-  onTabClick: action('onTabClick')
+  onTabClick: action('onTabClick'),
 };

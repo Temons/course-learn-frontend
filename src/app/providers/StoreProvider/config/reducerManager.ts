@@ -1,11 +1,23 @@
-import { AnyAction, combineReducers, Reducer, ReducersMapObject } from "@reduxjs/toolkit";
+import {
+  AnyAction,
+  combineReducers,
+  Reducer,
+  ReducersMapObject,
+} from '@reduxjs/toolkit';
 
-import { MountedReducers, ReducerManager, StateSchema, StateSchemaKey } from "./StateSchema";
+import {
+  MountedReducers,
+  ReducerManager,
+  StateSchema,
+  StateSchemaKey,
+} from './StateSchema';
 
-export function createReducerManager(initialReducers: ReducersMapObject<StateSchema>): ReducerManager {
-  const reducers = { ...initialReducers }
+export function createReducerManager(
+  initialReducers: ReducersMapObject<StateSchema>,
+): ReducerManager {
+  const reducers = { ...initialReducers };
 
-  let combinedReducer = combineReducers(reducers)
+  let combinedReducer = combineReducers(reducers);
 
   let keysToRemove: Array<StateSchemaKey> = [];
   const mountedReducers: MountedReducers = {};
@@ -15,19 +27,19 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
     getMountedReducers: () => mountedReducers,
     reduce: (state: StateSchema, action: AnyAction) => {
       if (keysToRemove.length > 0) {
-        state = { ...state }
+        state = { ...state };
         for (const key of keysToRemove) {
-          delete state[key]
+          delete state[key];
         }
-        keysToRemove = []
+        keysToRemove = [];
       }
 
-      return combinedReducer(state, action)
+      return combinedReducer(state, action);
     },
 
     add: (key: StateSchemaKey, reducer: Reducer) => {
       if (!key || reducers[key]) {
-        return
+        return;
       }
 
       reducers[key] = reducer;
@@ -38,7 +50,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 
     remove: (key: StateSchemaKey) => {
       if (!key || !reducers[key]) {
-        return
+        return;
       }
 
       delete reducers[key];
@@ -47,6 +59,6 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
       mountedReducers[key] = false;
 
       combinedReducer = combineReducers(reducers);
-    }
-  }
+    },
+  };
 }

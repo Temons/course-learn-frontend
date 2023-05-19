@@ -1,22 +1,22 @@
-import { memo, useCallback, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import { memo, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 import cls from './Navbar.module.scss';
 
-import { getUserAuthData } from "@/entities/User";
-import { LoginModal } from "@/features/AuthByUsername";
-import { AvatarDropdown } from "@/features/avatarDropdown";
-import { NotificationButton } from "@/features/notificationButton";
-import { getRouteArticleCreate } from "@/shared/const/router";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
-import { Button, ButtonTheme } from "@/shared/ui/Button";
-import { HStack } from "@/shared/ui/Stack";
-import { Text, TextTheme } from "@/shared/ui/Text";
+import { getUserAuthData } from '@/entities/User';
+import { LoginModal } from '@/features/AuthByUsername';
+import { AvatarDropdown } from '@/features/avatarDropdown';
+import { NotificationButton } from '@/features/notificationButton';
+import { getRouteArticleCreate } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { HStack } from '@/shared/ui/Stack';
+import { Text, TextTheme } from '@/shared/ui/Text';
 
 interface NavbarProps {
-    className? : string;
+  className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -25,11 +25,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const authData = useSelector(getUserAuthData);
 
   const onShowModal = useCallback(() => {
-    setIsAuthModal(true)
+    setIsAuthModal(true);
   }, []);
 
   const onCloseModal = useCallback(() => {
-    setIsAuthModal(false)
+    setIsAuthModal(false);
   }, []);
 
   if (authData) {
@@ -40,19 +40,15 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           title={t('frontendApp')}
           theme={TextTheme.INVERTED}
         />
-        <AppLink
-          to={getRouteArticleCreate()}
-          theme={AppLinkTheme.SECONDARY}
-        >
+        <AppLink to={getRouteArticleCreate()} theme={AppLinkTheme.SECONDARY}>
           {t('createArticle')}
         </AppLink>
-        <HStack gap='16' className={cls.actions}>
-
+        <HStack gap="16" className={cls.actions}>
           <NotificationButton />
           <AvatarDropdown />
         </HStack>
       </header>
-    )
+    );
   }
 
   return (
@@ -64,10 +60,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
       >
         {t('logIn')}
       </Button>
-      {isAuthModal && (<LoginModal
-        isOpen={isAuthModal}
-        onClose={onCloseModal}
-      />
+      {isAuthModal && (
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
     </header>
   );

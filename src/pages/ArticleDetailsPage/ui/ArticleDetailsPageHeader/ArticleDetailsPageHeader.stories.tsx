@@ -3,7 +3,7 @@ import React from 'react';
 
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
 
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPageHeader',
@@ -13,8 +13,10 @@ export default {
   },
 } as ComponentMeta<typeof ArticleDetailsPageHeader>;
 
-const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => <ArticleDetailsPageHeader {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsPageHeader> = args => (
+  <ArticleDetailsPageHeader {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({})]
+Normal.decorators = [StoreDecorator({})];

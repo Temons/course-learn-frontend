@@ -1,66 +1,54 @@
-import path from "path";
+import path from 'path';
 
 export default {
   // A set of global variables that need to be available in all test environments
   globals: {
     __IS_DEV__: true,
     __API__: '',
-    __PROJECT__: 'jest'
+    __PROJECT__: 'jest',
   },
 
   // Automatically clear mock calls, instances and results before every test
   clearMocks: true,
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    "/node_modules/"
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/'],
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    "node_modules"
-  ],
+  moduleDirectories: ['node_modules'],
 
   // An array of file extensions your modules use
-  moduleFileExtensions: [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
-  ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
-  modulePaths: [
-    "<rootDir>src"
-  ],
+  modulePaths: ['<rootDir>src'],
 
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-  ],
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
   setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 
   moduleNameMapper: {
     '\\.(s?css$)': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-    '^@/(.*)$': `<rootDir>/src/$1`
+    '^@/(.*)$': `<rootDir>/src/$1`,
   },
   reporters: [
-    "default",
-    ["jest-html-reporters", {
-      publicPath: "<rootDir>/reports/unit",
-      filename: "report.html",
-      // openReport: true,
-      inlineSource: true
-    }]
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: '<rootDir>/reports/unit',
+        filename: 'report.html',
+        // openReport: true,
+        inlineSource: true,
+      },
+    ],
   ],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -70,7 +58,6 @@ export default {
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "/private/var/folders/nh/zjk5fbwd0qn9tcrw0g7cj5jw0000gn/T/jest_dx",
-
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,

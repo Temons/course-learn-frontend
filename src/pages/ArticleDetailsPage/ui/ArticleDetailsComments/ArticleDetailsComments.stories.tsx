@@ -3,7 +3,7 @@ import React from 'react';
 
 import { ArticleDetailsComments } from './ArticleDetailsComments';
 
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsComments',
@@ -13,11 +13,12 @@ export default {
   },
 } as ComponentMeta<typeof ArticleDetailsComments>;
 
-const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => <ArticleDetailsComments {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsComments> = args => (
+  <ArticleDetailsComments {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
   id: '1',
-
 };
-Normal.decorators = [StoreDecorator({})]
+Normal.decorators = [StoreDecorator({})];

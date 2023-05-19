@@ -1,23 +1,26 @@
-import { HTMLAttributeAnchorTarget, memo } from "react";
-import { useTranslation } from "react-i18next";
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { ArticleBlockType, ArticleView } from "../../model/consts/articlesConsts";
-import { Article, ArticleTextBlock } from "../../model/types/article";
-import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
+import {
+  ArticleBlockType,
+  ArticleView,
+} from '../../model/consts/articlesConsts';
+import { Article, ArticleTextBlock } from '../../model/types/article';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 import cls from './ArticleListItem.module.scss';
 
 import EyeIcon from '@/shared/assets/icons/eye.svg';
-import { getRouteArticleDetails } from "@/shared/const/router";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { AppImage } from "@/shared/ui/AppImage";
-import { AppLink } from "@/shared/ui/AppLink";
-import { Avatar } from "@/shared/ui/Avatar";
-import { Button, ButtonTheme } from "@/shared/ui/Button";
-import { Card } from "@/shared/ui/Card";
-import { Icon } from "@/shared/ui/Icon";
-import { Skeleton } from "@/shared/ui/Skeleton";
-import { Text } from "@/shared/ui/Text";
+import { getRouteArticleDetails } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '@/shared/ui/AppImage';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Card } from '@/shared/ui/Card';
+import { Icon } from '@/shared/ui/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { Text } from '@/shared/ui/Text';
 
 interface ArticleListItemProps {
   className?: string;
@@ -36,11 +39,11 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       <Text text={String(article.views)} className={cls.views} />
       <Icon Svg={EyeIcon} />
     </>
-  )
+  );
 
   if (view === ArticleView.BIG) {
     const textBlock = article.blocks.find(
-      block => block.type === ArticleBlockType.TEXT
+      block => block.type === ArticleBlockType.TEXT,
     ) as ArticleTextBlock;
 
     return (
@@ -69,10 +72,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             />
           )}
           <div className={cls.footer}>
-            <AppLink
-              to={getRouteArticleDetails(article.id)}
-              target={target}
-            >
+            <AppLink to={getRouteArticleDetails(article.id)} target={target}>
               <Button theme={ButtonTheme.OUTLINE}>
                 {t('readMore') + '...'}
               </Button>
@@ -81,7 +81,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           </div>
         </Card>
       </div>
-    )
+    );
   }
 
   return (

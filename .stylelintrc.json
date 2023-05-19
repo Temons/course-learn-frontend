@@ -1,6 +1,6 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "rules" : {
+  "rules": {
     "indentation": [4],
     "selector-class-pattern": null,
     "declaration-block-no-duplicate-custom-properties": null,

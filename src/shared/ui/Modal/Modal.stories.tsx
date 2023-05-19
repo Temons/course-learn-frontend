@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { Modal } from "./Modal";
+import { Modal } from './Modal';
 
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/shared/const/theme";
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
   title: 'shared/Modal',
@@ -14,18 +14,18 @@ export default {
   },
 } as ComponentMeta<typeof Modal>;
 
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+const Template: ComponentStory<typeof Modal> = args => <Modal {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   isOpen: true,
-  children: "Lorem ipsum dolor sit amet, consecrate radicalising."
+  children: 'Lorem ipsum dolor sit amet, consecrate radicalising.',
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
   isOpen: true,
-  children: "Lorem ipsum dolor sit amet, consecrate radicalising."
+  children: 'Lorem ipsum dolor sit amet, consecrate radicalising.',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 Dark.parameters = { loki: { skip: true } };
@@ -33,7 +33,7 @@ Dark.parameters = { loki: { skip: true } };
 export const Orange = Template.bind({});
 Orange.args = {
   isOpen: true,
-  children: "Lorem ipsum dolor sit amet, consecrate radicalising."
+  children: 'Lorem ipsum dolor sit amet, consecrate radicalising.',
 };
 Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
-Orange.parameters = { loki: { skip: true } }
+Orange.parameters = { loki: { skip: true } };
