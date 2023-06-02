@@ -26,5 +26,6 @@
   "profile": "Profile",
   "adminPanelPage": "Admin Panel",
   "adminPanel": "Admin",
-  "noAccess": "You don't have access to this page"
+  "noAccess": "You don't have access to this page",
+  "featureFlagMock": "Feature flags demonstration place"
 }
