@@ -21,5 +21,7 @@
   "recommend": "We recommend next articles:",
   "edit": "Edit",
   "editArticle": "Edit article with ID = ",
-  "createNewArticle": "Create a new article"
+  "createNewArticle": "Create a new article",
+  "welcomeText": "Welcome to articles page!",
+  "infoWelcomeText": "Here you can know some info!"
 }
