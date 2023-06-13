@@ -9,6 +9,8 @@ import cls from './Sidebar.module.scss';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { AppLogo } from '@/shared/ui/AppLogo';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 import { VStack } from '@/shared/ui/Stack';
 
@@ -30,30 +32,47 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
   }, [collapsed, sidebarItemsList]);
 
   return (
-    <aside
-      data-testid="sidebar"
-      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-        className,
-      ])}
-    >
-      <VStack gap="8" role="navigation" className={cls.items}>
-        {itemsList}
-      </VStack>
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      on={
+        <aside
+          data-testid="sidebar"
+          className={classNames(
+            cls.sidebarRedesigned,
+            { [cls.collapsed]: collapsed },
+            [className],
+          )}
+        >
+          <AppLogo className={cls.appLogo} />
+        </aside>
+      }
+      off={
+        <aside
+          data-testid="sidebar"
+          className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+            className,
+          ])}
+        >
+          <VStack gap="8" role="navigation" className={cls.items}>
+            {itemsList}
+          </VStack>
 
-      <Button
-        data-testid="sidebar-toggle"
-        onClick={onToggle}
-        className={cls.collapseBtn}
-        theme={ButtonTheme.BACKGROUND_INVERTED}
-        size={ButtonSize.L}
-        square
-      >
-        {collapsed ? '>' : '<'}
-      </Button>
-      <div className={cls.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher className={cls.lang} short={collapsed} />
-      </div>
-    </aside>
+          <Button
+            data-testid="sidebar-toggle"
+            onClick={onToggle}
+            className={cls.collapseBtn}
+            theme={ButtonTheme.BACKGROUND_INVERTED}
+            size={ButtonSize.L}
+            square
+          >
+            {collapsed ? '>' : '<'}
+          </Button>
+          <div className={cls.switchers}>
+            <ThemeSwitcher />
+            <LangSwitcher className={cls.lang} short={collapsed} />
+          </div>
+        </aside>
+      }
+    />
   );
 });
