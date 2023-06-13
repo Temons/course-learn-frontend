@@ -2,6 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 import cls from './AvatarDropdown.module.scss';
 
 import {
@@ -12,8 +13,8 @@ import {
 } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 
 interface AvatarDropdownProps {
   className?: string;

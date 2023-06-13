@@ -14,7 +14,7 @@ import { getArticles } from '../../model/slices/articlesPageSlice';
 import { ArticleList } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Text } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/deprecated/Text';
 
 interface ArticleInfiniteListProps {
   className?: string;
