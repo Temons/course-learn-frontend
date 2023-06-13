@@ -1213,10 +1213,11 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1232,13 +1233,14 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
       },
       "jsonSettings": {
         "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingPageHasBeenOpen": false,
-        "isArticlesPageWasOpened": false
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2n1pP-KKfgW_ch97BmG6zdal9pCzXKtdSg&usqp=CAU"
     },
@@ -1251,7 +1253,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": false
       },
       "jsonSettings": {
         "theme": "app_light_theme",
@@ -1270,7 +1273,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
       },
       "jsonSettings": {
         "theme": "app_light_theme",
