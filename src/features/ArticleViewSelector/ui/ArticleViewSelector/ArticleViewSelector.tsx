@@ -43,6 +43,8 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
           className={cls.btnWrapper}
         >
           <Icon
+            width={24}
+            height={24}
             Svg={viewType.icon}
             className={classNames(
               '',
