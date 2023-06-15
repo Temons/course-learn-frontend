@@ -1,7 +1,6 @@
 import { Listbox as HListBox } from '@headlessui/react';
 import { Fragment, ReactNode, useMemo } from 'react';
 
-
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
 
@@ -30,10 +29,6 @@ interface ListBoxProps {
   label?: string;
 }
 
-/**
- * Old, use a new Component from redesigned folder
- * @deprecated
- */
 export function ListBox(props: ListBoxProps) {
   const {
     items = [],
@@ -46,7 +41,7 @@ export function ListBox(props: ListBoxProps) {
     label,
   } = props;
 
-  const optionsClasses = [mapDirectionClass[direction]];
+  const optionsClasses = [mapDirectionClass[direction], popupCls.menu];
 
   const itemsWithLabel = useMemo(
     () =>
