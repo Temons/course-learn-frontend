@@ -1,6 +1,5 @@
 import { CSSProperties, useMemo } from 'react';
 
-
 import UserIcon from '../../../assets/icons/user-filled.svg';
 
 import cls from './Avatar.module.scss';
@@ -15,15 +14,10 @@ interface AvatarProps {
   src?: string;
   size?: number;
   alt?: string;
-  fallbackInverted?: boolean;
 }
 
-/**
- * Old, use a new Component from redesigned folder
- * @deprecated
- */
 export const Avatar = (props: AvatarProps) => {
-  const { className, src, size = 125, alt, fallbackInverted } = props;
+  const { className, src, size = 125, alt } = props;
   const mods: Mods = {};
 
   const styles = useMemo<CSSProperties>(() => {
@@ -34,14 +28,7 @@ export const Avatar = (props: AvatarProps) => {
   }, [size]);
 
   const fallback = <Skeleton width={size} height={size} border={'50%'} />;
-  const errorFallback = (
-    <Icon
-      inverted={fallbackInverted}
-      width={size}
-      height={size}
-      Svg={UserIcon}
-    />
-  );
+  const errorFallback = <Icon width={size} height={size} Svg={UserIcon} />;
 
   return (
     <AppImage

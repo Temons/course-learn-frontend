@@ -8,8 +8,8 @@ import {
   useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { Overlay } from '@/shared/ui/deprecated/Overlay';
-import { Portal } from '@/shared/ui/deprecated/Portal';
+import { Overlay } from '@/shared/ui/redesigned/Overlay';
+import { Portal } from '@/shared/ui/redesigned/Portal';
 
 interface DrawerProps {
   className?: string;
