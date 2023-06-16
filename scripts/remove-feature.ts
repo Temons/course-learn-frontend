@@ -68,9 +68,6 @@ const replaceToggleFunction = (node: Node) => {
     ?.getText()
     .slice(1, -1);
 
-  console.log(onFunction?.getText());
-  console.log(featureName);
-
   if (featureName !== removedFeatureName) return;
 
   if (featureState === 'on') {
