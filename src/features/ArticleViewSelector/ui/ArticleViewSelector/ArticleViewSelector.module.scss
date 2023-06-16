@@ -1,7 +1,15 @@
-.btnWrapper {
-    margin-right: 5px;
+.articleViewSelector {
+    .btnWrapper {
+        margin-right: 5px;
+    }
+
+    .notSelected {
+        fill: var(--secondary-color);
+    }
 }
 
-.notSelected {
-    fill: var(--secondary-color);
+.articleViewSelectorRedesigned {
+    .notSelected {
+        color: var(--light-bg-redesigned);
+    }
 }
