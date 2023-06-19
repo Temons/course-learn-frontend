@@ -10,19 +10,25 @@ import React, {
 import cls from './Input.module.scss';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { HStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
+
+type InputSize = 's' | 'm' | 'l';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  'value' | 'onChange' | 'readOnly'
+  'value' | 'onChange' | 'readOnly' | 'size'
 >;
 interface InputProps extends HTMLInputProps {
   className?: string;
   value?: string | number;
+  label?: string;
   autofocus?: boolean;
   onChange?: (value: string) => void;
   readonly?: boolean;
   addonLeft?: ReactNode;
   addonRight?: ReactNode;
+  size?: InputSize;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -32,6 +38,7 @@ export const Input = memo((props: InputProps) => {
   const {
     className,
     value,
+    label,
     onChange,
     type = 'text',
     autofocus,
@@ -39,6 +46,7 @@ export const Input = memo((props: InputProps) => {
     readonly,
     addonLeft,
     addonRight,
+    size = 'm',
     ...otherProps
   } = props;
 
@@ -68,8 +76,8 @@ export const Input = memo((props: InputProps) => {
     [cls.withAddonRight]: Boolean(addonRight),
   };
 
-  return (
-    <div className={classNames(cls.inputWrapper, mods, [className])}>
+  const input = (
+    <div className={classNames(cls.inputWrapper, mods, [className, cls[size]])}>
       {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
       <input
         type={type}
@@ -85,4 +93,15 @@ export const Input = memo((props: InputProps) => {
       {addonRight && <div className={cls.addonRight}>{addonRight}</div>}
     </div>
   );
+
+  if (label) {
+    return (
+      <HStack max gap={'8'}>
+        <Text text={label} />
+        {input}
+      </HStack>
+    );
+  }
+
+  return input;
 });
