@@ -27,5 +27,10 @@
   "adminPanelPage": "Панель админа",
   "adminPanel": "Админка",
   "noAccess": "У вас нет доступа к данной странице",
-  "featureFlagMock": "Место демонстрации реализации механизма feature flags"
+  "featureFlagMock": "Место демонстрации реализации механизма feature flags",
+  "userSettings": "Настройки пользователя",
+  "new": "новый",
+  "old": "старый",
+  "interfaceVar": "Вариант интерфейса",
+  "settings": "Настройки"
 }
