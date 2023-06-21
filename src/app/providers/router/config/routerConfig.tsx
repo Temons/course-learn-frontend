@@ -64,12 +64,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     authOnly: true,
     roles: [UserRole.ADMIN, UserRole.MANAGER],
   },
-
   [AppRoutes.SETTINGS]: {
     path: getRouteSettings(),
     element: <SettingsPage />,
   },
-
   [AppRoutes.FORBIDDEN]: {
     path: getRouteForbidden(),
     element: <ForbiddenPage />,

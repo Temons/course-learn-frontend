@@ -2,8 +2,6 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
-import cls from './AvatarDropdown.module.scss';
-
 import {
   getUserAuthData,
   isUserAdmin,
@@ -69,7 +67,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
     <ToggleFeatures
       feature={'isAppRedesigned'}
       on={
-        <div className={classNames(cls.avatarDropdown, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
           <Dropdown
             direction="bottom left"
             items={items}
@@ -78,7 +76,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
         </div>
       }
       off={
-        <div className={classNames(cls.avatarDropdown, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
           <DropdownDeprecated
             direction="bottom left"
             items={items}
