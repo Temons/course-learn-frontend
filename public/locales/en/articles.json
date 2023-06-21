@@ -23,5 +23,8 @@
   "editArticle": "Edit article with ID = ",
   "createNewArticle": "Create a new article",
   "welcomeText": "Welcome to articles page!",
-  "infoWelcomeText": "Here you can know some info!"
+  "infoWelcomeText": "Here you can know some info!",
+  "{{count}} views_zero": "{{count}} views",
+  "{{count}} views_one": "{{count}} view",
+  "{{count}} views_other": "{{count}} views"
 }

@@ -23,5 +23,9 @@
   "editArticle": "редактировать статью с ID = ",
   "createNewArticle": "Создать новую статью",
   "welcomeText": "Добро пожаловать на страницу статей!",
-  "infoWelcomeText": "Ознакомьтесь с предложенной информацией!"
+  "infoWelcomeText": "Ознакомьтесь с предложенной информацией!",
+  "{{count}} views_zero": "{{count}} просмотров",
+  "{{count}} views_one": "{{count}} просмотр",
+  "{{count}} views_few": "{{count}} просмотра",
+  "{{count}} views_many": "{{count}} просмотров"
 }
