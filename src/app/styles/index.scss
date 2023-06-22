@@ -31,10 +31,20 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--card-bg);        /* цвет зоны отслеживания */
+    background: var(--light-bg-redesigned);        /* цвет зоны отслеживания */
 }
 
 *::-webkit-scrollbar-thumb {
+    background-color: var(--icon-redesigned);    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 1px solid var(--accent-redesigned);  /* отступ вокруг бегунка */
+}
+
+.app *::-webkit-scrollbar-track {
+    background: var(--card-bg);        /* цвет зоны отслеживания */
+}
+
+.app *::-webkit-scrollbar-thumb {
     background-color: var(--inverted-primary-color);    /* цвет бегунка */
     border-radius: 20px;       /* округлось бегунка */
     border: 2px solid var(--primary-color);  /* отступ вокруг бегунка */
