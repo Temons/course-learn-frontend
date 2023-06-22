@@ -1217,7 +1217,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1360,6 +1360,12 @@
       "rate": 5,
       "feedback": "qwedq",
       "id": "eagF4kt"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 2,
+      "id": "xymO61_"
     }
   ],
   "profile-ratings": [

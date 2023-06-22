@@ -4,7 +4,8 @@ import cls from './StarRating.module.scss';
 
 import StarIcon from '@/shared/assets/icons/star.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Icon } from '@/shared/ui/deprecated/Icon';
+import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface StarRatingProps {
   className?: string;
@@ -46,23 +47,43 @@ export const StarRating = memo((props: StarRatingProps) => {
   };
 
   return (
-    <div className={classNames(cls.starRating, {}, [className])}>
-      {stars.map(starNumber => (
-        <Icon
-          className={classNames(cls.starIcon, { [cls.selected]: isSelected }, [
+    <div
+      className={classNames(
+        toggleFeatures({
+          name: 'isAppRedesigned',
+          on: () => cls.starRatingRedesigned,
+          off: () => cls.starRating,
+        }),
+        {},
+        [className],
+      )}
+    >
+      {stars.map(starNumber => {
+        const commonProps = {
+          className: classNames(cls.starIcon, { [cls.selected]: isSelected }, [
             currentStarsCount >= starNumber ? cls.hovered : cls.normal,
-          ])}
-          Svg={StarIcon}
-          key={starNumber}
-          width={size}
-          height={size}
-          onMouseLeave={onLeave}
-          onMouseEnter={onHover(starNumber)}
-          onClick={onClick(starNumber)}
-          data-testid={`StarRating.${starNumber}`}
-          data-selected={currentStarsCount >= starNumber}
-        />
-      ))}
+          ]),
+          Svg: StarIcon,
+          key: starNumber,
+          width: size,
+          height: size,
+          onMouseLeave: onLeave,
+          onMouseEnter: onHover(starNumber),
+          onClick: onClick(starNumber),
+          'data-testid': `StarRating.${starNumber}`,
+          'data-selected': currentStarsCount >= starNumber,
+        };
+        return (
+          <ToggleFeatures
+            feature={'isAppRedesigned'}
+            key={starNumber}
+            on={
+              <Icon clickable={!isSelected} {...commonProps} key={starNumber} />
+            }
+            off={<Icon {...commonProps} key={starNumber} />}
+          />
+        );
+      })}
     </div>
   );
 });
