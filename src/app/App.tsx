@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import { useAppToolbar } from './lib/useAppToolbar';
 import { AppRouter } from './providers/router';
 
 import { getUserInited, initAuthData } from '@/entities/User';
@@ -18,6 +19,7 @@ const App = () => {
   const { theme } = useTheme();
   const dispatch = useAppDispatch();
   const inited = useSelector(getUserInited);
+  const toolbar = useAppToolbar();
 
   useEffect(() => {
     if (!inited) {
@@ -26,12 +28,6 @@ const App = () => {
   }, [dispatch, inited]);
 
   if (!inited) {
-    // console.log('theme', theme);
-    // return (
-    //
-    //     <AppLoaderLayout />
-    //   </div>
-    // );
     return (
       <ToggleFeatures
         feature={'isAppRedesigned'}
@@ -55,6 +51,7 @@ const App = () => {
               header={<Navbar />}
               content={<AppRouter />}
               sidebar={<Sidebar />}
+              toolbar={toolbar}
             />
           </Suspense>
         </div>
