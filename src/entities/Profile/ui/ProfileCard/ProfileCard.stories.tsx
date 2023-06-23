@@ -5,6 +5,7 @@ import { ProfileCard } from './ProfileCard';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 export default {
   title: 'entities/ProfileCard',
@@ -18,8 +19,7 @@ const Template: ComponentStory<typeof ProfileCard> = args => (
   <ProfileCard {...args} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+const primaryArgs = {
   data: {
     username: 'Username',
     age: 42,
@@ -32,6 +32,12 @@ Primary.args = {
       'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg',
   },
 };
+export const Primary = Template.bind({});
+Primary.args = primaryArgs;
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = primaryArgs;
+PrimaryRedesigned.decorators = [NewDesignDecorator];
 
 export const withError = Template.bind({});
 withError.args = {
