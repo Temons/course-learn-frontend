@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { AppRouter } from './providers/router';
 
-import { getUserInited } from '@/entities/User';
-import { initAuthData } from '@/entities/User';
+import { getUserInited, initAuthData } from '@/entities/User';
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
 import { MainLayout } from '@/shared/layouts/MainLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
@@ -26,7 +26,23 @@ const App = () => {
   }, [dispatch, inited]);
 
   if (!inited) {
-    return <PageLoader />;
+    // console.log('theme', theme);
+    // return (
+    //
+    //     <AppLoaderLayout />
+    //   </div>
+    // );
+    return (
+      <ToggleFeatures
+        feature={'isAppRedesigned'}
+        on={
+          <div id="app" className={classNames('app_redesigned', {}, [theme])}>
+            <AppLoaderLayout />
+          </div>
+        }
+        off={<PageLoader />}
+      />
+    );
   }
 
   return (
