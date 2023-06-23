@@ -3,6 +3,7 @@ import React from 'react';
 
 import { CommentCard } from './CommentCard';
 
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
@@ -31,6 +32,12 @@ export const Normal = Template.bind({});
 Normal.args = {
   comment,
 };
+
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.args = {
+  comment,
+};
+NormalRedesigned.decorators = [NewDesignDecorator];
 
 export const LoadingNormal = Template.bind({});
 LoadingNormal.args = {
