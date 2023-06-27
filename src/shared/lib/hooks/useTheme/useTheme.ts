@@ -35,8 +35,6 @@ export function useTheme(): UseThemeResult {
     saveAction?.(newTheme);
   };
 
-  console.log('theme', theme);
-
   return {
     theme: theme || Theme.LIGHT,
     toggleTheme,
