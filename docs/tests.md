@@ -1,7 +1,7 @@
-## Тесты
+## Tests
 
-В проекте используются 4 вида тестов:
-1) Обычные unit тесты на jest - `npm run test:unit`
-2) Тесты на компоненты с React testing library -`npm run test:unit`
-3) Скриншотное тестирование с loki `npm run test:ui`
-4) e2e тестирование с Cypress `npm run test:e2e`
+1) Storybook and Screenshot Testing - Storybook has been set up from scratch, and story cases have been written for each component and all its states. Screenshot testing is performed, enabling regression testing of our interface. 
+
+2) Unit and RTL Tests - The testing environment has been set up from scratch for unit tests with Jest and component tests using React Testing Library. Every developed module (selectors, async thunks, reducers, components) has been tested.
+
+3) E2E Testing - At the final stage of development, the implemented modules were covered with E2E tests.

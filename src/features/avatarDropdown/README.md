@@ -1,1 +1,1 @@
-## Фича с аватаром пользователя и меню
+## Feature with User Avatar and Menu
