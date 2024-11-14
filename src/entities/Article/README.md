@@ -1,26 +1,25 @@
-## Сущность статьи
-
-Описание:
-описываем сущность.
+## Entity Description
+Description:
+Describes the entity.
 
 #### Public api
 
 - Components
 
-`ArticleDetails` - компонент с информацией о статье
+`ArticleDetails` - Component displaying information about an article.
 
-`ArticleList` -  Компонент со списком статей
+`ArticleList` -  Component displaying a list of articles.
 
-`ArticleViewSelector` - Компонент переключатель отображения списка статьей (плитка, список)
+`ArticleViewSelector` - Component for toggling the view of the article list (grid or list view).
 
-`ArticleSortSelector` - Компонент с выбором сортировки списка статьей
+`ArticleSortSelector` - Component for selecting the sorting order of the article list.
 
-`ArticleTypeTabs` - Компонент с выбором типа статьи
+`ArticleTypeTabs` - Component for selecting the article type.
 
 - types
 
-`Article` - Тип, описывающий статью
+`Article` - Type describing an article.
 
 - selectors
 
-`getArticleDetailsData` - Селектор для получения информации о текущей открытой статье
+`getArticleDetailsData` - Selector for retrieving the data of the currently opened article.

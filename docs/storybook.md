@@ -1,14 +1,16 @@
 ## Storybook
 
-В проекте для каждого компонента описываются стори-кейсы.
-Запросы на сервер мокаются с помощью storybook-addon-mock.
+In the project, story cases are described for each component.
+Server requests are mocked usingstorybook-addon-mock.
 
-Файл со сторикейсами создает рядом с компонентом с расширением .stories.tsx
+The file with story cases is created next to the component with the .stories.tsx extension.
 
-Запустить сторибук можно командой:
+Storybook can be started with the following command:
 - `npm run storybook`
 
-Пример:
+More details about  [Storybook](/docs/storybook.md)
+
+Example:
 
 ```typescript jsx
 import React from 'react';

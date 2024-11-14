@@ -1,1 +1,1 @@
-## Фича содержащая функционал связанная с UI (scroll и тд)
+## Feature Containing UI-Related Functionality (scroll, etc.)

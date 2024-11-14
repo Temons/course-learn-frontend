@@ -1,36 +1,36 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    // Подсвечивает все места где не указан тип
-    // Однако это не означает, что теперь вовсе нельзя использовать any.
-    // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
+    // Highlights all places where the type is not specified
+    // However, this does not mean that using 'any' is now completely forbidden.
+    // It simply means that in such situations, the developer must explicitly write 'any'.
     "noImplicitAny": true,
     "module": "ESNext",
-    // В какую спецификацию компилируем: для поддержки большинства браузеров
+    // Which specification are we compiling to: for supporting most browsers
     "target": "es5",
     "jsx": "react-jsx",
-    // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
+    // The compiler will process not only TS files but also JS files
     "allowJs": true,
     "moduleResolution": "node",
-    // Для абсолютного импорта
+    // For absolute import
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "strict": true,
-    // esModuleInterop позволяет работать с пакетами, которые используют
-    // common js как с обычными пакета с помощью import (require() module.export) = common js
+    // esModuleInterop allows working with packages that use
+    // CommonJS as regular packages with import (require() module.exports) = common js
     // import Moment from 'moment';
-    // без флага esModuleInterop результат undefined
+    // without the esModuleInterop flag, the result is undefined
     // console.log(Moment);
-    // c флагом результат [object Object]
+    // with the flag, the result is [object Object]
     // console.log(Moment);
     "esModuleInterop": true,
-    // Если какая-либо библиотека не имеет default import,
-    // лоадеры вроде ts-loader или babel-loader автоматически создают их
-    // вместо такого импорта
+    // If any library does not have a default import,
+    // loaders like ts-loader or babel-loader automatically create one.
+    // Instead of this import:
     // import * as React from 'react';
-    // можно писать такой
+    // you can write this:
     // import React from 'react';
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true

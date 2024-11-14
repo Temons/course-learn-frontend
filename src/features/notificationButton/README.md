@@ -1,1 +1,1 @@
-## Фича с кнопкой, открывающей список уведомлений
+## Feature with a Button to Open the Notifications List
